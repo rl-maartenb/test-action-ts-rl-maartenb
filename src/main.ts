@@ -212,7 +212,7 @@ export class RlJsonReportProcessor {
   getComponentInfo(component_id: string): string[] {
     const lines: string[] = []
 
-    const component = this.jpath2dict(this.components, 'component_id')
+    const component = this.jpath2dict(this.components, component_id)
     const name = this.jpath2string(component, 'name')
     const path = this.jpath2string(component, 'path')
     const version = this.jpath2string(component, 'identity.version')
@@ -255,7 +255,7 @@ export class RlJsonReportProcessor {
 
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
     for (const [_, vv] of Object.entries(this.violations)) {
-      let v = vv as ODictByString
+      const v = vv as ODictByString
 
       if (this.jpath2string(v, 'rule_id') != viol) {
         continue
@@ -361,7 +361,7 @@ export class RlJsonReportProcessor {
     const lines_by_prio: { [key: number]: string[] } = {}
 
     for (const item of evaluations) {
-      let i = item as ODictByString
+      const i = item as ODictByString
 
       const [prio, s] = this.do_one_evalu(i)
       if (lines_by_prio[prio] == undefined) {

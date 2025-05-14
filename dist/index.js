@@ -27414,7 +27414,7 @@ class RlJsonReportProcessor {
     }
     getComponentInfo(component_id) {
         const lines = [];
-        const component = this.jpath2dict(this.components, 'component_id');
+        const component = this.jpath2dict(this.components, component_id);
         const name = this.jpath2string(component, 'name');
         const path = this.jpath2string(component, 'path');
         const version = this.jpath2string(component, 'identity.version');
@@ -27451,7 +27451,7 @@ class RlJsonReportProcessor {
         const rr = [];
         // eslint-disable-next-line @typescript-eslint/no-unused-vars
         for (const [_, vv] of Object.entries(this.violations)) {
-            let v = vv;
+            const v = vv;
             if (this.jpath2string(v, 'rule_id') != viol) {
                 continue;
             }
@@ -27532,7 +27532,7 @@ class RlJsonReportProcessor {
          */
         const lines_by_prio = {};
         for (const item of evaluations) {
-            let i = item;
+            const i = item;
             const [prio, s] = this.do_one_evalu(i);
             if (lines_by_prio[prio] == undefined) {
                 lines_by_prio[prio] = [];
@@ -27572,7 +27572,7 @@ class RlJsonReportProcessor {
         this.out.push('# Assessments');
         this.out.push('');
         for (const [k, v] of Object.entries(this.assessments)) {
-            let i = v;
+            const i = v;
             this.doOneAssessment(k, i);
         }
     }
