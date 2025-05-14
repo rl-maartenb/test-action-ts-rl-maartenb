@@ -414,7 +414,7 @@ export class RlJsonReportProcessor {
     this.out.push('')
 
     for (const [k, v] of Object.entries(this.assessments)) {
-      let i = v as ODictByString
+      const i = v as ODictByString
       this.doOneAssessment(k, i)
     }
   }
