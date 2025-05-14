@@ -1,6 +1,7 @@
 import require$$0 from 'os';
 import require$$0$1 from 'crypto';
-import require$$1 from 'fs';
+import * as require$$1 from 'fs';
+import require$$1__default from 'fs';
 import require$$1$5 from 'path';
 import require$$2 from 'http';
 import require$$3 from 'https';
@@ -222,7 +223,7 @@ function requireFileCommand () {
 	// We use any as a valid input type
 	/* eslint-disable @typescript-eslint/no-explicit-any */
 	const crypto = __importStar(require$$0$1);
-	const fs = __importStar(require$$1);
+	const fs = __importStar(require$$1__default);
 	const os = __importStar(require$$0);
 	const utils_1 = requireUtils$1();
 	function issueFileCommand(command, message) {
@@ -25200,7 +25201,7 @@ function requireSummary () {
 		Object.defineProperty(exports, "__esModule", { value: true });
 		exports.summary = exports.markdownSummary = exports.SUMMARY_DOCS_URL = exports.SUMMARY_ENV_VAR = void 0;
 		const os_1 = require$$0;
-		const fs_1 = require$$1;
+		const fs_1 = require$$1__default;
 		const { access, appendFile, writeFile } = fs_1.promises;
 		exports.SUMMARY_ENV_VAR = 'GITHUB_STEP_SUMMARY';
 		exports.SUMMARY_DOCS_URL = 'https://docs.github.com/actions/using-workflows/workflow-commands-for-github-actions#adding-a-job-summary';
@@ -25592,7 +25593,7 @@ function requireIoUtil () {
 		var _a;
 		Object.defineProperty(exports, "__esModule", { value: true });
 		exports.getCmdPath = exports.tryGetExecutablePath = exports.isRooted = exports.isDirectory = exports.exists = exports.READONLY = exports.UV_FS_O_EXLOCK = exports.IS_WINDOWS = exports.unlink = exports.symlink = exports.stat = exports.rmdir = exports.rm = exports.rename = exports.readlink = exports.readdir = exports.open = exports.mkdir = exports.lstat = exports.copyFile = exports.chmod = void 0;
-		const fs = __importStar(require$$1);
+		const fs = __importStar(require$$1__default);
 		const path = __importStar(require$$1$5);
 		_a = fs.promises
 		// export const {open} = 'fs'
@@ -27246,7 +27247,345 @@ function requireCore () {
 
 var coreExports = requireCore();
 
+//import { RlJsonReportProcessor } from './rlJsonReportProcessor'
 // Debug logs are only output if the `ACTIONS_STEP_DEBUG` secret is true
+/*
+// parse the rl-json report and produce a simplefied summary on stdout
+//
+// extensive data lists can be embedded in a details html construct:
+// <details><summary>summary</summary> extensive content ... </details>
+// drop down behaviour will work in github markdown text
+//
+// for the moment console.log is sufficient to print to stdout
+*/
+function Capitalize(str) {
+    const modStr = str[0].toUpperCase() + str.slice(1);
+    return modStr;
+}
+class RlJsonReportProcessor {
+    filename;
+    data;
+    name;
+    purl;
+    assessments; // report/metadata.assessments
+    violations; // report.metadata.violations
+    components; // report.metadata.components
+    vulnerabilities; // report.metadata.vulnerabilities
+    viols;
+    indent = '    ';
+    out;
+    constructor(filename) {
+        this.filename = filename;
+        this.viols = [];
+        this.out = [];
+        this.data = JSON.parse(require$$1.readFileSync(this.filename, 'utf-8'));
+        this.name =
+            this.jpath2string(this.data, 'report.info.file.name') || '<no name>';
+        this.purl =
+            this.jpath2string(this.data, 'report.info.file.identity.purl') ||
+                '<no purl>';
+        this.assessments = this.jpath2dict(this.data, 'report.metadata.assessments');
+        this.violations = this.jpath2dict(this.data, 'report.metadata.violations');
+        this.components = this.jpath2dict(this.data, 'report.metadata.components');
+        this.vulnerabilities = this.jpath2dict(this.data, 'report.metadata.vulnerabilities');
+    }
+    jpath2string(data, path_str) {
+        const path_list = path_str.split('.');
+        let z = data;
+        for (const item of path_list) {
+            z = data[item]; // the last item is actually a string
+        }
+        const u = z;
+        return u;
+    }
+    jpath2string_list(data, path_str) {
+        const path_list = path_str.split('.');
+        let z = data;
+        for (const item of path_list) {
+            z = data[item]; // the last item is actually a string
+        }
+        const u = z;
+        return u;
+    }
+    jpath2number(data, path_str) {
+        const path_list = path_str.split('.');
+        let z = data;
+        for (const item of path_list) {
+            z = data[item]; // the last item is actually a string
+        }
+        const u = z;
+        return u;
+    }
+    jpath2dict(data, path_str) {
+        const path_list = path_str.split('.');
+        let z = data;
+        for (const item of path_list) {
+            z = data[item]; // the last item is actually a string
+        }
+        return z;
+    }
+    cveSeverity(baseScore) {
+        /*
+         * Severity	BaseScore
+         * None	    0
+         * Low	    0.1-3.9
+         * Medium	  4.0-6.9
+         * High	    7.0-8.9
+         * Critical	9.0-10.0
+         */
+        if (baseScore < 0.1) {
+            return 'None';
+        }
+        if (baseScore >= 0.1 && baseScore < 4.0) {
+            return 'Low';
+        }
+        if (baseScore >= 4.0 && baseScore < 7.0) {
+            return 'Medium';
+        }
+        if (baseScore >= 7.0 && baseScore < 9.0) {
+            return 'High';
+        }
+        if (baseScore >= 9.0 && baseScore <= 10.0) {
+            return 'Critical';
+        }
+        return 'Critical';
+    }
+    output() {
+        for (const line of this.out) {
+            console.log(line);
+        }
+    }
+    htmlDetails(summary, content, plain = false) {
+        if (plain == true) {
+            this.out.push(`<a name="${summary}">${summary}</a>`);
+            for (const line of content) {
+                this.out.push(line);
+            }
+            this.out.push('');
+            return;
+        }
+        this.out.push(`<a name="${summary}"></a>`);
+        this.out.push('<details>');
+        this.out.push(`<summary>${summary}</summary>`);
+        for (const line of content) {
+            this.out.push(line);
+        }
+        this.out.push('</details>');
+        this.out.push('');
+    }
+    colorStatus(status) {
+        if (status == 'Fail') {
+            status = ':red_square: ' + status;
+        }
+        if (status == 'Warning') {
+            status = ':orange_square: ' + status;
+        }
+        if (status == 'Pass') {
+            status = ':green_square: ' + status;
+        }
+        return status;
+    }
+    colorSeverity(severity) {
+        if (severity == 'Critical') {
+            severity = ':red_circle: ' + severity;
+        }
+        if (severity == 'High') {
+            severity = ':orange_circle: ' + severity;
+        }
+        if (severity == 'Medium') {
+            severity = ':yellow_circle: ' + severity;
+        }
+        if (severity == 'Low') {
+            severity = ':large_blue_circle: ' + severity;
+        }
+        if (severity == 'None') {
+            severity = ':green_circle: ' + severity;
+        }
+        return severity;
+    }
+    getVulnerabilityInfo(cve) {
+        const lines = [];
+        const url = `https://www.cve.org/CVERecord?id=${cve}`;
+        const baseScore = this.jpath2number(this.vulnerabilities, 'cve.cvss.baseScore');
+        let severity = this.cveSeverity(baseScore);
+        severity = this.colorSeverity(severity);
+        lines.push(`- [${cve}](${url}); Severity: ${severity}, base-score: ${baseScore}`);
+        return lines;
+    }
+    getComponentInfo(component_id) {
+        const lines = [];
+        const component = this.jpath2dict(this.components, 'component_id');
+        const name = this.jpath2string(component, 'name');
+        const path = this.jpath2string(component, 'path');
+        const version = this.jpath2string(component, 'identity.version');
+        const purl = this.jpath2string(component, 'identity.purl');
+        const vuls = this.jpath2dict(component, 'identity.vulnerabilities');
+        let cve_list = [];
+        if (vuls) {
+            cve_list = this.jpath2string_list(vuls, 'active');
+        }
+        lines.push('### Component:');
+        lines.push('');
+        lines.push(`- Path: ${path}`);
+        if (purl.length > 0) {
+            lines.push(`- Purl: ${purl}`);
+        }
+        else {
+            lines.push(`- Name: ${name}`);
+            lines.push(`- Version: ${version}`);
+        }
+        lines.push('');
+        if (cve_list.length > 0) {
+            lines.push('#### Vulnerabilities:');
+            for (const cve of cve_list) {
+                const z = this.getVulnerabilityInfo(cve);
+                for (const line of z) {
+                    lines.push(line);
+                }
+            }
+            lines.push('');
+        }
+        return lines;
+    }
+    getViolationInfo(viol) {
+        const rr = [];
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
+        for (const [_, vv] of Object.entries(this.violations)) {
+            let v = vv;
+            if (this.jpath2string(v, 'rule_id') != viol) {
+                continue;
+            }
+            const description = this.jpath2string(v, 'description');
+            const category = this.jpath2string(v, 'category');
+            const component_ids = this.jpath2string_list(v, 'references.component');
+            let severity = Capitalize(this.jpath2string(v, 'severity'));
+            severity = this.colorSeverity(severity);
+            let status = Capitalize(this.jpath2string(v, 'status'));
+            status = this.colorStatus(status);
+            rr.push('');
+            rr.push(`- **Description:** ***${description}***`);
+            rr.push(`- **Category: ${category}**`);
+            rr.push(`- **Status: ${status}**`);
+            rr.push(`- **Severity: ${severity}**`);
+            rr.push('');
+            for (const id of component_ids) {
+                for (const line of this.getComponentInfo(id)) {
+                    rr.push(line);
+                }
+            }
+        }
+        return rr;
+    }
+    showViolations() {
+        this.out.push('');
+        this.out.push('## Violations');
+        this.out.push('');
+        const vv = this.viols.sort();
+        for (const viol of vv) {
+            let lines = [];
+            lines = this.getViolationInfo(viol);
+            this.htmlDetails(viol, lines);
+        }
+    }
+    // ------------------------------------------
+    doAllViolations(viols) {
+        const zz = [];
+        if (viols.length > 0) {
+            for (const viol of viols) {
+                if (this.viols.includes(viol) === false) {
+                    this.viols.push(viol);
+                }
+            }
+            for (const viol of viols) {
+                zz.push(`[${viol}](#${viol})`);
+            }
+        }
+        let z = '';
+        if (zz.length > 0) {
+            z = ' (' + zz.join(', ') + ')';
+        }
+        return z;
+    }
+    doOneAssesementLine(status, count, label, viols) {
+        const z = this.doAllViolations(viols);
+        status = this.colorStatus(status);
+        let line = `${status}: ${label}` + z;
+        if (count > 0) {
+            line = `${status}: ${label}: ${count}` + z;
+        }
+        return line;
+    }
+    do_one_evalu(item) {
+        const prio = this.jpath2number(item, 'priority');
+        const count = this.jpath2number(item, 'count');
+        const status = Capitalize(this.jpath2string(item, 'status'));
+        const label = Capitalize(this.jpath2string(item, 'label'));
+        const viols = this.jpath2string_list(item, 'violations');
+        const line = this.doOneAssesementLine(status, count, label, viols);
+        const r = [prio, line];
+        return r;
+    }
+    do_all_evalu(evaluations) {
+        /*
+         * evaluations have a priority,
+         * sort by prio most important (0) first
+         */
+        const lines_by_prio = {};
+        for (const item of evaluations) {
+            let i = item;
+            const [prio, s] = this.do_one_evalu(i);
+            if (lines_by_prio[prio] == undefined) {
+                lines_by_prio[prio] = [];
+            }
+            lines_by_prio[prio].push(s);
+        }
+        const lines = [];
+        for (const prio in lines_by_prio) {
+            for (const line of lines_by_prio[prio]) {
+                lines.push(line);
+            }
+        }
+        return lines;
+    }
+    doEvaluations(v) {
+        const evaluations = v['evaluations'];
+        if (evaluations.length > 0) {
+            const ss = this.do_all_evalu(evaluations);
+            for (const s of ss) {
+                this.out.push(`${this.indent}- ${s}`);
+            }
+        }
+    }
+    doOneAssessment(k, v) {
+        let line = `- ${Capitalize(k)}:`;
+        this.out.push(line);
+        const count = this.jpath2number(v, 'count');
+        const label = Capitalize(this.jpath2string(v, 'label'));
+        const status = Capitalize(this.jpath2string(v, 'status'));
+        const viols = this.jpath2string_list(v, 'violations');
+        line = this.doOneAssesementLine(status, count, label, viols);
+        this.out.push(`${this.indent}- ${line}`);
+        this.doEvaluations(v);
+    }
+    doAssessments() {
+        this.out.push('');
+        this.out.push('# Assessments');
+        this.out.push('');
+        for (const [k, v] of Object.entries(this.assessments)) {
+            let i = v;
+            this.doOneAssessment(k, i);
+        }
+    }
+    simplifyRlJson() {
+        this.doAssessments();
+        this.showViolations();
+    }
+}
+/*
+const rjrp = new RlJsonReportProcessor("report.rl.json");
+rjrp.simplifyRlJson();
+rjrp.output();
+*/
 /**
  * The main function for the action.
  *
@@ -27261,6 +27600,9 @@ async function run() {
         const name = data.info.file.identity.name;
         const purl = data.info.file.identity.purl;
         coreExports.debug(`name: ${name}, purl: ${purl}`);
+        const rjrp = new RlJsonReportProcessor('report.rl.json');
+        rjrp.simplifyRlJson();
+        rjrp.output();
         // Set outputs for other workflow steps to use
         // core.setOutput('time', new Date().toTimeString())
     }
