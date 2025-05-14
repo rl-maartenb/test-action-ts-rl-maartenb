@@ -27246,6 +27246,7 @@ function requireCore () {
 
 var coreExports = requireCore();
 
+// Debug logs are only output if the `ACTIONS_STEP_DEBUG` secret is true
 /**
  * The main function for the action.
  *
@@ -27253,24 +27254,21 @@ var coreExports = requireCore();
  */
 async function run() {
     try {
-        // const ms: string = core.getInput('milliseconds')
-        const rl_json_file = coreExports.getInput('rl_json_file');
-        var data = JSON.parse(require$$1.readFileSync(rl_json_file, 'utf-8'));
-        // Debug logs are only output if the `ACTIONS_STEP_DEBUG` secret is true
+        const rl_json_file = coreExports.getInput('rl_json_path');
+        const data = JSON.parse(require$$1.readFileSync(rl_json_file, 'utf-8'));
         coreExports.debug(`loaded json file ${rl_json_file}`);
-        // data.info.file.identity {name, purl }
-        // data.report.metadata.assessments
-        // Log the current timestamp, wait, then log the new timestamp
         coreExports.debug(new Date().toTimeString());
-        // await wait(parseInt(ms, 10))
-        // core.debug(new Date().toTimeString())
+        const name = data.info.file.identity.name;
+        const purl = data.info.file.identity.purl;
+        coreExports.debug(`name: ${name}, purl: ${purl}`);
         // Set outputs for other workflow steps to use
-        coreExports.setOutput('time', new Date().toTimeString());
+        // core.setOutput('time', new Date().toTimeString())
     }
     catch (error) {
         // Fail the workflow run if an error occurs
-        if (error instanceof Error)
+        if (error instanceof Error) {
             coreExports.setFailed(error.message);
+        }
     }
 }
 

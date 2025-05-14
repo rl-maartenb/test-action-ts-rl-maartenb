@@ -1,23 +1,18 @@
-name: The name of your action here
-description: Provide a description here
-author: Your name or organization here
+name: rl-json-to-simple-feedback-markdown
+description:
+  Parse the report.rl.json file and produce a markdown simplefied summary
+author: ReversingLabs
 
 # Add your action's branding here. This will appear on the GitHub Marketplace.
 branding:
   icon: heart
-  color: red
+  color: purple
 
 # Define your inputs here.
 inputs:
-  milliseconds:
-    description: Your input description here
+  rl_json_path:
+    description: The path to the report.rl.json file.
     required: true
-    default: '1000'
-
-# Define your outputs here.
-outputs:
-  time:
-    description: Your output description here
 
 runs:
   using: node20
