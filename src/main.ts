@@ -425,12 +425,6 @@ export class RlJsonReportProcessor {
   }
 }
 
-/*
-const rjrp = new RlJsonReportProcessor("report.rl.json");
-rjrp.simplifyRlJson();
-rjrp.output();
-*/
-
 /**
  * The main function for the action.
  *
@@ -449,10 +443,7 @@ export async function run(): Promise<void> {
 
     const rjrp = new RlJsonReportProcessor('report.rl.json')
     rjrp.simplifyRlJson()
-    rjrp.output()
-
-    // Set outputs for other workflow steps to use
-    // core.setOutput('time', new Date().toTimeString())
+    rjrp.output() // prints to console.log()
   } catch (error) {
     // Fail the workflow run if an error occurs
     if (error instanceof Error) {
