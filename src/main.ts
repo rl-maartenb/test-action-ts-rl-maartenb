@@ -414,15 +414,7 @@ export async function run(): Promise<void> {
   try {
     const rl_json_file = core.getInput('rl_json_path')
     core.debug(`${rl_json_file}`)
-
-    const data = JSON.parse(fs.readFileSync(rl_json_file, 'utf-8'))
-    core.debug(`loaded json file ${rl_json_file}`)
-
-    const name: string = data.info.file.identity.name
-    const purl: string = data.info.file.identity.purl
-    core.debug(`name: ${name}, purl: ${purl}`)
-
-    const rjrp = new RlJsonReportProcessor('report.rl.json')
+    const rjrp = new RlJsonReportProcessor(rl_json_file)
     rjrp.simplifyRlJson()
     rjrp.output() // prints to console.log()
   } catch (error) {

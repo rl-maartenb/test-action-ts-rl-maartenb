@@ -27587,12 +27587,7 @@ async function run() {
     try {
         const rl_json_file = coreExports.getInput('rl_json_path');
         coreExports.debug(`${rl_json_file}`);
-        const data = JSON.parse(require$$1.readFileSync(rl_json_file, 'utf-8'));
-        coreExports.debug(`loaded json file ${rl_json_file}`);
-        const name = data.info.file.identity.name;
-        const purl = data.info.file.identity.purl;
-        coreExports.debug(`name: ${name}, purl: ${purl}`);
-        const rjrp = new RlJsonReportProcessor('report.rl.json');
+        const rjrp = new RlJsonReportProcessor(rl_json_file);
         rjrp.simplifyRlJson();
         rjrp.output(); // prints to console.log()
     }
