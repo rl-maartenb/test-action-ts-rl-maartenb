@@ -27247,33 +27247,23 @@ function requireCore () {
 var coreExports = requireCore();
 
 /**
- * Waits for a number of milliseconds.
- *
- * @param milliseconds The number of milliseconds to wait.
- * @returns Resolves with 'done!' after the wait is over.
- */
-async function wait(milliseconds) {
-    return new Promise((resolve) => {
-        if (isNaN(milliseconds))
-            throw new Error('milliseconds is not a number');
-        setTimeout(() => resolve('done!'), milliseconds);
-    });
-}
-
-/**
  * The main function for the action.
  *
  * @returns Resolves when the action is complete.
  */
 async function run() {
     try {
-        const ms = coreExports.getInput('milliseconds');
+        // const ms: string = core.getInput('milliseconds')
+        const rl_json_file = coreExports.getInput('rl_json_file');
+        var data = JSON.parse(require$$1.readFileSync(rl_json_file, 'utf-8'));
         // Debug logs are only output if the `ACTIONS_STEP_DEBUG` secret is true
-        coreExports.debug(`Waiting ${ms} milliseconds ...`);
+        coreExports.debug(`loaded json file ${rl_json_file}`);
+        // data.info.file.identity {name, purl }
+        // data.report.metadata.assessments
         // Log the current timestamp, wait, then log the new timestamp
         coreExports.debug(new Date().toTimeString());
-        await wait(parseInt(ms, 10));
-        coreExports.debug(new Date().toTimeString());
+        // await wait(parseInt(ms, 10))
+        // core.debug(new Date().toTimeString())
         // Set outputs for other workflow steps to use
         coreExports.setOutput('time', new Date().toTimeString());
     }

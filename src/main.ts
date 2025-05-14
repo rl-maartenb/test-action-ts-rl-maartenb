@@ -1,5 +1,8 @@
 import * as core from '@actions/core'
-import { wait } from './wait.js'
+// import { wait } from './wait.js'
+import fs from 'fs'
+
+// Debug logs are only output if the `ACTIONS_STEP_DEBUG` secret is true
 
 /**
  * The main function for the action.
@@ -8,15 +11,18 @@ import { wait } from './wait.js'
  */
 export async function run(): Promise<void> {
   try {
-    const ms: string = core.getInput('milliseconds')
-
-    // Debug logs are only output if the `ACTIONS_STEP_DEBUG` secret is true
-    core.debug(`Waiting ${ms} milliseconds ...`)
-
-    // Log the current timestamp, wait, then log the new timestamp
+    // const ms: string = core.getInput('milliseconds')
+    const rl_json_file: string = core.getInput('rl_json_file')
+    const data = JSON.parse(fs.readFileSync(rl_json_file, 'utf-8'))
+    core.debug(`loaded json file ${rl_json_file}`)
     core.debug(new Date().toTimeString())
-    await wait(parseInt(ms, 10))
-    core.debug(new Date().toTimeString())
+
+    const name: string = data.info.file.identity.name
+    const purl: string = data.info.file.identity.purl
+    core.debug(`name: {name}, purl: {purl}`)
+
+    // data.info.file.identity {name, purl }
+    // data.report.metadata.assessments
 
     // Set outputs for other workflow steps to use
     core.setOutput('time', new Date().toTimeString())
