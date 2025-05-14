@@ -19,18 +19,25 @@ function Capitalize(str: string): string {
   return modStr
 }
 
+function assert(expr: unknown, msg?: string): asserts expr {
+  if (!expr) throw new Error(msg)
+}
+
 type ODictByString = {
   [key: string]: object
 }
 
 export class RlJsonReportProcessor {
+  debug: boolean
   filename: string
   data: ODictByString
 
   name: string
   purl: string
 
-  assessments: ODictByString // report/metadata.assessments
+  metadata: ODictByString // report.metadata
+
+  assessments: ODictByString // report.metadata.assessments
   violations: ODictByString // report.metadata.violations
   components: ODictByString // report.metadata.components
   vulnerabilities: ODictByString // report.metadata.vulnerabilities
@@ -39,26 +46,31 @@ export class RlJsonReportProcessor {
   indent: string = '    '
   out: string[]
 
-  constructor(filename: string) {
-    this.filename = filename
+  constructor(filename: string, debug: boolean = false) {
     this.viols = []
     this.out = []
+    this.debug = debug
+
+    this.filename = filename
     this.data = JSON.parse(fs.readFileSync(this.filename, 'utf-8'))
 
     this.name = this.jpath2string(this.data, 'report.info.file.name') || '<no name>'
     this.purl = this.jpath2string(this.data, 'report.info.file.identity.purl') || '<no purl>'
+    console.log(`# filePath: ${this.filename} purl: ${this.purl}`)
 
-    this.assessments = this.jpath2dict(this.data, 'report.metadata.assessments')
-    this.violations = this.jpath2dict(this.data, 'report.metadata.violations')
-    this.components = this.jpath2dict(this.data, 'report.metadata.components')
-    this.vulnerabilities = this.jpath2dict(this.data, 'report.metadata.vulnerabilities')
+    this.metadata = this.jpath2dict(this.data, 'report.metadata')
+    this.assessments = this.jpath2dict(this.metadata, 'assessments')
+    assert(this.assessments, 'has no data')
+    this.violations = this.jpath2dict(this.metadata, 'violations')
+    this.components = this.jpath2dict(this.metadata, 'components')
+    this.vulnerabilities = this.jpath2dict(this.metadata, 'vulnerabilities')
   }
 
   jpath2string(data: ODictByString, path_str: string): string {
     const path_list: string[] = path_str.split('.')
     let z: ODictByString = data
     for (const item of path_list) {
-      z = data[item] as ODictByString // the last item is actually a string
+      z = z[item] as ODictByString // the last item is actually a string
     }
     const u = z as unknown
     return u as string
@@ -68,7 +80,7 @@ export class RlJsonReportProcessor {
     const path_list: string[] = path_str.split('.')
     let z: ODictByString = data
     for (const item of path_list) {
-      z = data[item] as ODictByString // the last item is actually a string
+      z = z[item] as ODictByString // the last item is actually a string[]
     }
     const u = z as unknown
     return u as string[]
@@ -78,7 +90,7 @@ export class RlJsonReportProcessor {
     const path_list: string[] = path_str.split('.')
     let z: ODictByString = data
     for (const item of path_list) {
-      z = data[item] as ODictByString // the last item is actually a string
+      z = z[item] as ODictByString // the last item is actually a number
     }
     const u = z as unknown
     return u as number
@@ -86,9 +98,10 @@ export class RlJsonReportProcessor {
 
   jpath2dict(data: ODictByString, path_str: string): ODictByString {
     const path_list: string[] = path_str.split('.')
+
     let z: ODictByString = data
     for (const item of path_list) {
-      z = data[item] as ODictByString // the last item is actually a string
+      z = z[item] as ODictByString
     }
     return z
   }
@@ -185,7 +198,7 @@ export class RlJsonReportProcessor {
     const lines: string[] = []
 
     const url: string = `https://www.cve.org/CVERecord?id=${cve}`
-    const baseScore = this.jpath2number(this.vulnerabilities, 'cve.cvss.baseScore')
+    const baseScore = this.jpath2number(this.vulnerabilities, `${cve}.cvss.baseScore`)
     let severity: string = this.cveSeverity(baseScore)
     severity = this.colorSeverity(severity)
 

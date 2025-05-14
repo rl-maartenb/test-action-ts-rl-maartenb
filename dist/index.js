@@ -27262,35 +27262,45 @@ function Capitalize(str) {
     const modStr = str[0].toUpperCase() + str.slice(1);
     return modStr;
 }
+function assert(expr, msg) {
+    if (!expr)
+        throw new Error(msg);
+}
 class RlJsonReportProcessor {
+    debug;
     filename;
     data;
     name;
     purl;
-    assessments; // report/metadata.assessments
+    metadata; // report.metadata
+    assessments; // report.metadata.assessments
     violations; // report.metadata.violations
     components; // report.metadata.components
     vulnerabilities; // report.metadata.vulnerabilities
     viols;
     indent = '    ';
     out;
-    constructor(filename) {
-        this.filename = filename;
+    constructor(filename, debug = false) {
         this.viols = [];
         this.out = [];
+        this.debug = debug;
+        this.filename = filename;
         this.data = JSON.parse(require$$1.readFileSync(this.filename, 'utf-8'));
         this.name = this.jpath2string(this.data, 'report.info.file.name') || '<no name>';
         this.purl = this.jpath2string(this.data, 'report.info.file.identity.purl') || '<no purl>';
-        this.assessments = this.jpath2dict(this.data, 'report.metadata.assessments');
-        this.violations = this.jpath2dict(this.data, 'report.metadata.violations');
-        this.components = this.jpath2dict(this.data, 'report.metadata.components');
-        this.vulnerabilities = this.jpath2dict(this.data, 'report.metadata.vulnerabilities');
+        console.log(`# filePath: ${this.filename} purl: ${this.purl}`);
+        this.metadata = this.jpath2dict(this.data, 'report.metadata');
+        this.assessments = this.jpath2dict(this.metadata, 'assessments');
+        assert(this.assessments, 'has no data');
+        this.violations = this.jpath2dict(this.metadata, 'violations');
+        this.components = this.jpath2dict(this.metadata, 'components');
+        this.vulnerabilities = this.jpath2dict(this.metadata, 'vulnerabilities');
     }
     jpath2string(data, path_str) {
         const path_list = path_str.split('.');
         let z = data;
         for (const item of path_list) {
-            z = data[item]; // the last item is actually a string
+            z = z[item]; // the last item is actually a string
         }
         const u = z;
         return u;
@@ -27299,7 +27309,7 @@ class RlJsonReportProcessor {
         const path_list = path_str.split('.');
         let z = data;
         for (const item of path_list) {
-            z = data[item]; // the last item is actually a string
+            z = z[item]; // the last item is actually a string[]
         }
         const u = z;
         return u;
@@ -27308,7 +27318,7 @@ class RlJsonReportProcessor {
         const path_list = path_str.split('.');
         let z = data;
         for (const item of path_list) {
-            z = data[item]; // the last item is actually a string
+            z = z[item]; // the last item is actually a number
         }
         const u = z;
         return u;
@@ -27317,7 +27327,7 @@ class RlJsonReportProcessor {
         const path_list = path_str.split('.');
         let z = data;
         for (const item of path_list) {
-            z = data[item]; // the last item is actually a string
+            z = z[item];
         }
         return z;
     }
@@ -27403,7 +27413,7 @@ class RlJsonReportProcessor {
     getVulnerabilityInfo(cve) {
         const lines = [];
         const url = `https://www.cve.org/CVERecord?id=${cve}`;
-        const baseScore = this.jpath2number(this.vulnerabilities, 'cve.cvss.baseScore');
+        const baseScore = this.jpath2number(this.vulnerabilities, `${cve}.cvss.baseScore`);
         let severity = this.cveSeverity(baseScore);
         severity = this.colorSeverity(severity);
         lines.push(`- [${cve}](${url}); Severity: ${severity}, base-score: ${baseScore}`);
