@@ -45,19 +45,13 @@ export class RlJsonReportProcessor {
     this.out = []
     this.data = JSON.parse(fs.readFileSync(this.filename, 'utf-8'))
 
-    this.name =
-      this.jpath2string(this.data, 'report.info.file.name') || '<no name>'
-    this.purl =
-      this.jpath2string(this.data, 'report.info.file.identity.purl') ||
-      '<no purl>'
+    this.name = this.jpath2string(this.data, 'report.info.file.name') || '<no name>'
+    this.purl = this.jpath2string(this.data, 'report.info.file.identity.purl') || '<no purl>'
 
     this.assessments = this.jpath2dict(this.data, 'report.metadata.assessments')
     this.violations = this.jpath2dict(this.data, 'report.metadata.violations')
     this.components = this.jpath2dict(this.data, 'report.metadata.components')
-    this.vulnerabilities = this.jpath2dict(
-      this.data,
-      'report.metadata.vulnerabilities'
-    )
+    this.vulnerabilities = this.jpath2dict(this.data, 'report.metadata.vulnerabilities')
   }
 
   jpath2string(data: ODictByString, path_str: string): string {
@@ -133,11 +127,7 @@ export class RlJsonReportProcessor {
     }
   }
 
-  htmlDetails(
-    summary: string,
-    content: string[],
-    plain: boolean = false
-  ): void {
+  htmlDetails(summary: string, content: string[], plain: boolean = false): void {
     if (plain == true) {
       this.out.push(`<a name="${summary}">${summary}</a>`)
       for (const line of content) {
@@ -195,16 +185,11 @@ export class RlJsonReportProcessor {
     const lines: string[] = []
 
     const url: string = `https://www.cve.org/CVERecord?id=${cve}`
-    const baseScore = this.jpath2number(
-      this.vulnerabilities,
-      'cve.cvss.baseScore'
-    )
+    const baseScore = this.jpath2number(this.vulnerabilities, 'cve.cvss.baseScore')
     let severity: string = this.cveSeverity(baseScore)
     severity = this.colorSeverity(severity)
 
-    lines.push(
-      `- [${cve}](${url}); Severity: ${severity}, base-score: ${baseScore}`
-    )
+    lines.push(`- [${cve}](${url}); Severity: ${severity}, base-score: ${baseScore}`)
 
     return lines
   }
@@ -322,12 +307,7 @@ export class RlJsonReportProcessor {
     return z
   }
 
-  doOneAssesementLine(
-    status: string,
-    count: number,
-    label: string,
-    viols: string[]
-  ): string {
+  doOneAssesementLine(status: string, count: number, label: string, viols: string[]): string {
     const z: string = this.doAllViolations(viols)
 
     status = this.colorStatus(status)
@@ -432,10 +412,11 @@ export class RlJsonReportProcessor {
  */
 export async function run(): Promise<void> {
   try {
-    const rl_json_file: string = core.getInput('rl_json_path')
+    const rl_json_file = core.getInput('rl_json_path')
+    core.debug(`${rl_json_file}`)
+
     const data = JSON.parse(fs.readFileSync(rl_json_file, 'utf-8'))
     core.debug(`loaded json file ${rl_json_file}`)
-    core.debug(new Date().toTimeString())
 
     const name: string = data.info.file.identity.name
     const purl: string = data.info.file.identity.purl
@@ -447,6 +428,8 @@ export async function run(): Promise<void> {
   } catch (error) {
     // Fail the workflow run if an error occurs
     if (error instanceof Error) {
+      console.log(error, error.message)
+      core.debug(`${error}, ${error.message}`)
       core.setFailed(error.message)
     }
   }

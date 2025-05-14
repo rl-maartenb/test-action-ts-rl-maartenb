@@ -7,7 +7,7 @@
     "outDir": "./dist",
     "isolatedModules": true
   },
-  "exclude": ["__fixtures__", "__tests__", "coverage", "dist", "node_modules"],
+  "exclude": ["__fixtures__", "__tests__", "coverage", "dist", "node_modules", "data"],
   "include": ["src"],
   "isolatedModules": true
 }

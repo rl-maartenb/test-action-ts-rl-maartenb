@@ -27279,11 +27279,8 @@ class RlJsonReportProcessor {
         this.viols = [];
         this.out = [];
         this.data = JSON.parse(require$$1.readFileSync(this.filename, 'utf-8'));
-        this.name =
-            this.jpath2string(this.data, 'report.info.file.name') || '<no name>';
-        this.purl =
-            this.jpath2string(this.data, 'report.info.file.identity.purl') ||
-                '<no purl>';
+        this.name = this.jpath2string(this.data, 'report.info.file.name') || '<no name>';
+        this.purl = this.jpath2string(this.data, 'report.info.file.identity.purl') || '<no purl>';
         this.assessments = this.jpath2dict(this.data, 'report.metadata.assessments');
         this.violations = this.jpath2dict(this.data, 'report.metadata.violations');
         this.components = this.jpath2dict(this.data, 'report.metadata.components');
@@ -27589,9 +27586,9 @@ class RlJsonReportProcessor {
 async function run() {
     try {
         const rl_json_file = coreExports.getInput('rl_json_path');
+        coreExports.debug(`${rl_json_file}`);
         const data = JSON.parse(require$$1.readFileSync(rl_json_file, 'utf-8'));
         coreExports.debug(`loaded json file ${rl_json_file}`);
-        coreExports.debug(new Date().toTimeString());
         const name = data.info.file.identity.name;
         const purl = data.info.file.identity.purl;
         coreExports.debug(`name: ${name}, purl: ${purl}`);
@@ -27602,6 +27599,8 @@ async function run() {
     catch (error) {
         // Fail the workflow run if an error occurs
         if (error instanceof Error) {
+            console.log(error, error.message);
+            coreExports.debug(`${error}, ${error.message}`);
             coreExports.setFailed(error.message);
         }
     }
