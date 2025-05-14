@@ -28,14 +28,8 @@
         },
         "format": "",
         "hashes": [
-          [
-            "md5",
-            "a9c5924063a253f64fb86bc924be6996"
-          ],
-          [
-            "sha1",
-            "c39ba1e011318b3edf295d4bdde3d56b5de89972"
-          ],
+          ["md5", "a9c5924063a253f64fb86bc924be6996"],
+          ["sha1", "c39ba1e011318b3edf295d4bdde3d56b5de89972"],
           [
             "sha256",
             "eb1b278b91a8f183f9749948abd9556ec21b03ca852c53e423d824d5d7cc3de4"
@@ -71,9 +65,7 @@
           "verified": true,
           "version": "0.80",
           "vulnerabilities": {
-            "active": [
-              "CVE-2024-31497"
-            ],
+            "active": ["CVE-2024-31497"],
             "triaged": []
           }
         },
@@ -170,18 +162,14 @@
               "label": "low priority mitigations absent",
               "priority": 3,
               "status": "pass",
-              "violations": [
-                "SQ14127"
-              ]
+              "violations": ["SQ14127"]
             }
           ],
           "final": false,
           "label": "modern mitigations missing",
           "priority": 3,
           "status": "warning",
-          "violations": [
-            "SQ14122"
-          ]
+          "violations": ["SQ14122"]
         },
         "licenses": {
           "count": 0,
@@ -226,9 +214,7 @@
           "label": "medium severity vulnerabilities",
           "priority": 2,
           "status": "warning",
-          "violations": [
-            "SQ31106"
-          ]
+          "violations": ["SQ31106"]
         }
       },
       "components": {
@@ -239,14 +225,8 @@
           },
           "format": "",
           "hashes": [
-            [
-              "md5",
-              "a9c5924063a253f64fb86bc924be6996"
-            ],
-            [
-              "sha1",
-              "c39ba1e011318b3edf295d4bdde3d56b5de89972"
-            ],
+            ["md5", "a9c5924063a253f64fb86bc924be6996"],
+            ["sha1", "c39ba1e011318b3edf295d4bdde3d56b5de89972"],
             [
               "sha256",
               "eb1b278b91a8f183f9749948abd9556ec21b03ca852c53e423d824d5d7cc3de4"
@@ -282,9 +262,7 @@
             "verified": true,
             "version": "0.80",
             "vulnerabilities": {
-              "active": [
-                "CVE-2024-31497"
-              ],
+              "active": ["CVE-2024-31497"],
               "triaged": []
             }
           },
@@ -310,14 +288,8 @@
           },
           "format": "HTML",
           "hashes": [
-            [
-              "md5",
-              "9138f1f88497e900e3e9833d19c7c0aa"
-            ],
-            [
-              "sha1",
-              "ff71ba38616b4accb1835c946ff207c3110eba38"
-            ],
+            ["md5", "9138f1f88497e900e3e9833d19c7c0aa"],
+            ["sha1", "ff71ba38616b4accb1835c946ff207c3110eba38"],
             [
               "sha256",
               "d69ba78812b65e88edc7e9a316e7f829972d74a78e4c854710947b484f84eaaa"
@@ -367,14 +339,8 @@
           },
           "format": "HTML",
           "hashes": [
-            [
-              "md5",
-              "403446f1c0c4b7be1d4201dcb1f2dda0"
-            ],
-            [
-              "sha1",
-              "93ccc6e35e9d0d5953179b3e9b2103e7c349606f"
-            ],
+            ["md5", "403446f1c0c4b7be1d4201dcb1f2dda0"],
+            ["sha1", "93ccc6e35e9d0d5953179b3e9b2103e7c349606f"],
             [
               "sha256",
               "1ca6dd14465e01fb826c487267c023b721494e294b0d44922fcb1e4d35f056db"
@@ -424,14 +390,8 @@
           },
           "format": "HTML",
           "hashes": [
-            [
-              "md5",
-              "1fb950efc4e2d79cfb083132b69249fe"
-            ],
-            [
-              "sha1",
-              "19a4d70b95a2294c51368858488eacb630046a1c"
-            ],
+            ["md5", "1fb950efc4e2d79cfb083132b69249fe"],
+            ["sha1", "19a4d70b95a2294c51368858488eacb630046a1c"],
             [
               "sha256",
               "f3a84471da9a6b42763159a881124322785e61460c6f5a0edb903f0e2da223ed"
@@ -478,344 +438,240 @@
       "cryptography": {
         "algorithms": {
           "178929b3-f970-47ce-9041-b48ee5f9cb7c": {
-            "functions": [
-              "digest"
-            ],
+            "functions": ["digest"],
             "mode": "unknown",
             "pqc_level": 0,
             "primitive": "hash",
             "properties": [],
             "references": {
-              "component": [
-                "023dcfaf-b24e-568c-9948-0a6dcd4cfe93"
-              ]
+              "component": ["023dcfaf-b24e-568c-9948-0a6dcd4cfe93"]
             },
             "size": 0,
-            "sources": [
-              "pattern"
-            ],
+            "sources": ["pattern"],
             "type": "haval",
             "violations": []
           },
           "1a9cd198-61d5-47b7-888c-3f4a715e5f54": {
-            "functions": [
-              "digest"
-            ],
+            "functions": ["digest"],
             "mode": "unknown",
             "pqc_level": 0,
             "primitive": "hash",
             "properties": [],
             "references": {
-              "component": [
-                "023dcfaf-b24e-568c-9948-0a6dcd4cfe93"
-              ]
+              "component": ["023dcfaf-b24e-568c-9948-0a6dcd4cfe93"]
             },
             "size": 128,
-            "sources": [
-              "pattern"
-            ],
+            "sources": ["pattern"],
             "type": "ripemd128",
             "violations": []
           },
           "1b23d5e3-683a-4778-8b7b-e0c78090b497": {
-            "functions": [
-              "digest"
-            ],
+            "functions": ["digest"],
             "mode": "unknown",
             "pqc_level": 0,
             "primitive": "hash",
             "properties": [],
             "references": {
-              "component": [
-                "023dcfaf-b24e-568c-9948-0a6dcd4cfe93"
-              ]
+              "component": ["023dcfaf-b24e-568c-9948-0a6dcd4cfe93"]
             },
             "size": 128,
-            "sources": [
-              "pattern"
-            ],
+            "sources": ["pattern"],
             "type": "md5",
             "violations": []
           },
           "29f94155-7b1c-47db-9a75-3799b8e5f8d1": {
-            "functions": [
-              "digest"
-            ],
+            "functions": ["digest"],
             "mode": "unknown",
             "pqc_level": 5,
             "primitive": "hash",
             "properties": [],
             "references": {
-              "component": [
-                "023dcfaf-b24e-568c-9948-0a6dcd4cfe93"
-              ]
+              "component": ["023dcfaf-b24e-568c-9948-0a6dcd4cfe93"]
             },
             "size": 512,
-            "sources": [
-              "pattern"
-            ],
+            "sources": ["pattern"],
             "type": "sha512",
             "violations": []
           },
           "30b7e5e2-3a94-4d86-a2f6-099757d89582": {
-            "functions": [
-              "digest"
-            ],
+            "functions": ["digest"],
             "mode": "unknown",
             "pqc_level": 0,
             "primitive": "hash",
             "properties": [],
             "references": {
-              "component": [
-                "023dcfaf-b24e-568c-9948-0a6dcd4cfe93"
-              ]
+              "component": ["023dcfaf-b24e-568c-9948-0a6dcd4cfe93"]
             },
             "size": 160,
-            "sources": [
-              "pattern"
-            ],
+            "sources": ["pattern"],
             "type": "ripemd160",
             "violations": []
           },
           "49d97487-9960-40be-acaa-9e5893373596": {
-            "functions": [
-              "digest"
-            ],
+            "functions": ["digest"],
             "mode": "unknown",
             "pqc_level": 0,
             "primitive": "hash",
             "properties": [],
             "references": {
-              "component": [
-                "023dcfaf-b24e-568c-9948-0a6dcd4cfe93"
-              ]
+              "component": ["023dcfaf-b24e-568c-9948-0a6dcd4cfe93"]
             },
             "size": 384,
-            "sources": [
-              "pattern"
-            ],
+            "sources": ["pattern"],
             "type": "blake384",
             "violations": []
           },
           "4adfa604-82c6-4137-bb94-c8ce83237f01": {
-            "functions": [
-              "digest"
-            ],
+            "functions": ["digest"],
             "mode": "unknown",
             "pqc_level": 0,
             "primitive": "hash",
             "properties": [],
             "references": {
-              "component": [
-                "023dcfaf-b24e-568c-9948-0a6dcd4cfe93"
-              ]
+              "component": ["023dcfaf-b24e-568c-9948-0a6dcd4cfe93"]
             },
             "size": 256,
-            "sources": [
-              "pattern"
-            ],
+            "sources": ["pattern"],
             "type": "blake256",
             "violations": []
           },
           "4ae094c1-47a1-40e5-8d2c-b52731e5db9a": {
-            "functions": [
-              "digest"
-            ],
+            "functions": ["digest"],
             "mode": "unknown",
             "pqc_level": 0,
             "primitive": "hash",
             "properties": [],
             "references": {
-              "component": [
-                "023dcfaf-b24e-568c-9948-0a6dcd4cfe93"
-              ]
+              "component": ["023dcfaf-b24e-568c-9948-0a6dcd4cfe93"]
             },
             "size": 128,
-            "sources": [
-              "pattern"
-            ],
+            "sources": ["pattern"],
             "type": "md4",
             "violations": []
           },
           "4c3bb2d1-950d-4467-915d-d8609bf7d5ac": {
-            "functions": [
-              "digest"
-            ],
+            "functions": ["digest"],
             "mode": "unknown",
             "pqc_level": 0,
             "primitive": "hash",
             "properties": [],
             "references": {
-              "component": [
-                "023dcfaf-b24e-568c-9948-0a6dcd4cfe93"
-              ]
+              "component": ["023dcfaf-b24e-568c-9948-0a6dcd4cfe93"]
             },
             "size": 160,
-            "sources": [
-              "pattern"
-            ],
+            "sources": ["pattern"],
             "type": "sha1",
             "violations": []
           },
           "5f7d92ad-1674-445d-a624-5372ad89cdab": {
-            "functions": [
-              "digest"
-            ],
+            "functions": ["digest"],
             "mode": "unknown",
             "pqc_level": 2,
             "primitive": "hash",
             "properties": [],
             "references": {
-              "component": [
-                "023dcfaf-b24e-568c-9948-0a6dcd4cfe93"
-              ]
+              "component": ["023dcfaf-b24e-568c-9948-0a6dcd4cfe93"]
             },
             "size": 256,
-            "sources": [
-              "pattern"
-            ],
+            "sources": ["pattern"],
             "type": "sha256",
             "violations": []
           },
           "74e2f2d9-54a1-4866-bd9f-36582c6301c9": {
-            "functions": [
-              "digest"
-            ],
+            "functions": ["digest"],
             "mode": "unknown",
             "pqc_level": 0,
             "primitive": "hash",
             "properties": [],
             "references": {
-              "component": [
-                "023dcfaf-b24e-568c-9948-0a6dcd4cfe93"
-              ]
+              "component": ["023dcfaf-b24e-568c-9948-0a6dcd4cfe93"]
             },
             "size": 0,
-            "sources": [
-              "pattern"
-            ],
+            "sources": ["pattern"],
             "type": "blake2",
             "violations": []
           },
           "760b7cf9-e0dd-4751-bd87-a432d100bc53": {
-            "functions": [
-              "digest"
-            ],
+            "functions": ["digest"],
             "mode": "unknown",
             "pqc_level": 0,
             "primitive": "hash",
             "properties": [],
             "references": {
-              "component": [
-                "023dcfaf-b24e-568c-9948-0a6dcd4cfe93"
-              ]
+              "component": ["023dcfaf-b24e-568c-9948-0a6dcd4cfe93"]
             },
             "size": 224,
-            "sources": [
-              "pattern"
-            ],
+            "sources": ["pattern"],
             "type": "sha224",
             "violations": []
           },
           "831d94f5-82f5-4439-aaed-4e05f8373dea": {
-            "functions": [
-              "decrypt",
-              "encrypt"
-            ],
+            "functions": ["decrypt", "encrypt"],
             "mode": "unknown",
             "pqc_level": 0,
             "primitive": "stream-cipher",
             "properties": [],
             "references": {
-              "component": [
-                "023dcfaf-b24e-568c-9948-0a6dcd4cfe93"
-              ]
+              "component": ["023dcfaf-b24e-568c-9948-0a6dcd4cfe93"]
             },
             "size": 0,
-            "sources": [
-              "pattern"
-            ],
+            "sources": ["pattern"],
             "type": "chacha20",
             "violations": []
           },
           "b5f558f8-eee4-4454-80c2-7b586073dd91": {
-            "functions": [
-              "digest"
-            ],
+            "functions": ["digest"],
             "mode": "unknown",
             "pqc_level": 0,
             "primitive": "hash",
             "properties": [],
             "references": {
-              "component": [
-                "023dcfaf-b24e-568c-9948-0a6dcd4cfe93"
-              ]
+              "component": ["023dcfaf-b24e-568c-9948-0a6dcd4cfe93"]
             },
             "size": 512,
-            "sources": [
-              "pattern"
-            ],
+            "sources": ["pattern"],
             "type": "blake512",
             "violations": []
           },
           "e0676676-9df8-41f0-a798-9ee6d88156df": {
-            "functions": [
-              "digest"
-            ],
+            "functions": ["digest"],
             "mode": "unknown",
             "pqc_level": 0,
             "primitive": "hash",
             "properties": [],
             "references": {
-              "component": [
-                "023dcfaf-b24e-568c-9948-0a6dcd4cfe93"
-              ]
+              "component": ["023dcfaf-b24e-568c-9948-0a6dcd4cfe93"]
             },
             "size": 0,
-            "sources": [
-              "pattern"
-            ],
+            "sources": ["pattern"],
             "type": "sha3",
             "violations": []
           },
           "edb0189e-811f-4759-8b7d-a40af7a51699": {
-            "functions": [
-              "decrypt",
-              "encrypt"
-            ],
+            "functions": ["decrypt", "encrypt"],
             "mode": "unknown",
             "pqc_level": 0,
             "primitive": "block-cipher",
             "properties": [],
             "references": {
-              "component": [
-                "023dcfaf-b24e-568c-9948-0a6dcd4cfe93"
-              ]
+              "component": ["023dcfaf-b24e-568c-9948-0a6dcd4cfe93"]
             },
             "size": 0,
-            "sources": [
-              "pattern"
-            ],
+            "sources": ["pattern"],
             "type": "blowfish",
             "violations": []
           },
           "f4e0af92-b707-4ba9-9ae7-9976761ac119": {
-            "functions": [
-              "digest"
-            ],
+            "functions": ["digest"],
             "mode": "unknown",
             "pqc_level": 4,
             "primitive": "hash",
             "properties": [],
             "references": {
-              "component": [
-                "023dcfaf-b24e-568c-9948-0a6dcd4cfe93"
-              ]
+              "component": ["023dcfaf-b24e-568c-9948-0a6dcd4cfe93"]
             },
             "size": 384,
-            "sources": [
-              "pattern"
-            ],
+            "sources": ["pattern"],
             "type": "sha384",
             "violations": []
           }
@@ -871,52 +727,26 @@
               }
             ],
             "issuer": [
-              [
-                "countryName",
-                "GB"
-              ],
-              [
-                "organizationName",
-                "Sectigo Limited"
-              ],
-              [
-                "commonName",
-                "Sectigo Public Code Signing CA R36"
-              ]
+              ["countryName", "GB"],
+              ["organizationName", "Sectigo Limited"],
+              ["commonName", "Sectigo Public Code Signing CA R36"]
             ],
             "references": {
-              "component": [
-                "023dcfaf-b24e-568c-9948-0a6dcd4cfe93"
-              ]
+              "component": ["023dcfaf-b24e-568c-9948-0a6dcd4cfe93"]
             },
             "serial_number": "8e3fbfb91be6da041ba41f7a983ad61e",
             "size": 0,
             "subject": [
-              [
-                "countryName",
-                "GB"
-              ],
-              [
-                "stateOrProvinceName",
-                "Cambridgeshire"
-              ],
-              [
-                "organizationName",
-                "Simon Tatham"
-              ],
-              [
-                "commonName",
-                "Simon Tatham"
-              ]
+              ["countryName", "GB"],
+              ["stateOrProvinceName", "Cambridgeshire"],
+              ["organizationName", "Simon Tatham"],
+              ["commonName", "Simon Tatham"]
             ],
             "thumbprint": "8b5d2a54b182d234cc46d2fd4d9b139610ce6d3abf3beef328e3884e9b14a850",
             "type": "X.509",
             "valid_from": "2021-11-06T00:00:00Z",
             "valid_to": "2024-11-05T23:59:59Z",
-            "violations": [
-              "SQ20119",
-              "SQ20121"
-            ]
+            "violations": ["SQ20119", "SQ20121"]
           }
         },
         "materials": null,
@@ -1098,9 +928,7 @@
           "description": "Changes the value of a registry key.",
           "occurrences": 1,
           "priority": 6,
-          "references": [
-            "023dcfaf-b24e-568c-9948-0a6dcd4cfe93"
-          ],
+          "references": ["023dcfaf-b24e-568c-9948-0a6dcd4cfe93"],
           "rule_id": "BH12168",
           "violations": 0
         },
@@ -1109,9 +937,7 @@
           "description": "Contains patterns identifying the constants related to the SHA-224 hash function, from the SHA-2 hash family.",
           "occurrences": 1,
           "priority": 1,
-          "references": [
-            "023dcfaf-b24e-568c-9948-0a6dcd4cfe93"
-          ],
+          "references": ["023dcfaf-b24e-568c-9948-0a6dcd4cfe93"],
           "rule_id": "BH13644",
           "violations": 0
         },
@@ -1120,9 +946,7 @@
           "description": "Creates a thread.",
           "occurrences": 1,
           "priority": 3,
-          "references": [
-            "023dcfaf-b24e-568c-9948-0a6dcd4cfe93"
-          ],
+          "references": ["023dcfaf-b24e-568c-9948-0a6dcd4cfe93"],
           "rule_id": "BH13418",
           "violations": 0
         },
@@ -1131,9 +955,7 @@
           "description": "Checks if the specified window is minimized.",
           "occurrences": 1,
           "priority": 3,
-          "references": [
-            "023dcfaf-b24e-568c-9948-0a6dcd4cfe93"
-          ],
+          "references": ["023dcfaf-b24e-568c-9948-0a6dcd4cfe93"],
           "rule_id": "BH13443",
           "violations": 0
         },
@@ -1142,9 +964,7 @@
           "description": "Deletes a registry key and its values.",
           "occurrences": 1,
           "priority": 7,
-          "references": [
-            "023dcfaf-b24e-568c-9948-0a6dcd4cfe93"
-          ],
+          "references": ["023dcfaf-b24e-568c-9948-0a6dcd4cfe93"],
           "rule_id": "BH12225",
           "violations": 0
         },
@@ -1153,9 +973,7 @@
           "description": "Writes to files.",
           "occurrences": 1,
           "priority": 3,
-          "references": [
-            "023dcfaf-b24e-568c-9948-0a6dcd4cfe93"
-          ],
+          "references": ["023dcfaf-b24e-568c-9948-0a6dcd4cfe93"],
           "rule_id": "BH13329",
           "violations": 0
         },
@@ -1164,9 +982,7 @@
           "description": "Contains patterns identifying the constants related to the RIPEMD128 hash function.",
           "occurrences": 1,
           "priority": 1,
-          "references": [
-            "023dcfaf-b24e-568c-9948-0a6dcd4cfe93"
-          ],
+          "references": ["023dcfaf-b24e-568c-9948-0a6dcd4cfe93"],
           "rule_id": "BH13639",
           "violations": 0
         },
@@ -1175,9 +991,7 @@
           "description": "Contains placeholders for IP addresses.",
           "occurrences": 1,
           "priority": 5,
-          "references": [
-            "023dcfaf-b24e-568c-9948-0a6dcd4cfe93"
-          ],
+          "references": ["023dcfaf-b24e-568c-9948-0a6dcd4cfe93"],
           "rule_id": "BH16330",
           "violations": 0
         },
@@ -1186,9 +1000,7 @@
           "description": "Checks if the window is maximized.",
           "occurrences": 1,
           "priority": 3,
-          "references": [
-            "023dcfaf-b24e-568c-9948-0a6dcd4cfe93"
-          ],
+          "references": ["023dcfaf-b24e-568c-9948-0a6dcd4cfe93"],
           "rule_id": "BH13421",
           "violations": 0
         },
@@ -1197,9 +1009,7 @@
           "description": "Writes data to the STDOUT stream.",
           "occurrences": 1,
           "priority": 3,
-          "references": [
-            "023dcfaf-b24e-568c-9948-0a6dcd4cfe93"
-          ],
+          "references": ["023dcfaf-b24e-568c-9948-0a6dcd4cfe93"],
           "rule_id": "BH13412",
           "violations": 0
         },
@@ -1217,9 +1027,7 @@
           "description": "Queries the system time.",
           "occurrences": 1,
           "priority": 3,
-          "references": [
-            "023dcfaf-b24e-568c-9948-0a6dcd4cfe93"
-          ],
+          "references": ["023dcfaf-b24e-568c-9948-0a6dcd4cfe93"],
           "rule_id": "BH13417",
           "violations": 0
         },
@@ -1228,9 +1036,7 @@
           "description": "Forces a window to close.",
           "occurrences": 1,
           "priority": 3,
-          "references": [
-            "023dcfaf-b24e-568c-9948-0a6dcd4cfe93"
-          ],
+          "references": ["023dcfaf-b24e-568c-9948-0a6dcd4cfe93"],
           "rule_id": "BH13409",
           "violations": 0
         },
@@ -1239,9 +1045,7 @@
           "description": "Contains patterns identifying the constants related to the Keccak (SHA3) hash function.",
           "occurrences": 1,
           "priority": 1,
-          "references": [
-            "023dcfaf-b24e-568c-9948-0a6dcd4cfe93"
-          ],
+          "references": ["023dcfaf-b24e-568c-9948-0a6dcd4cfe93"],
           "rule_id": "BH13635",
           "violations": 0
         },
@@ -1250,9 +1054,7 @@
           "description": "Contains patterns identifying the constants related to the SHA-256 hash function, from the SHA-2 hash family.",
           "occurrences": 1,
           "priority": 1,
-          "references": [
-            "023dcfaf-b24e-568c-9948-0a6dcd4cfe93"
-          ],
+          "references": ["023dcfaf-b24e-568c-9948-0a6dcd4cfe93"],
           "rule_id": "BH13645",
           "violations": 0
         },
@@ -1261,9 +1063,7 @@
           "description": "Contains reference to shell32.dll which is Windows Shell Common Dll.",
           "occurrences": 1,
           "priority": 1,
-          "references": [
-            "023dcfaf-b24e-568c-9948-0a6dcd4cfe93"
-          ],
+          "references": ["023dcfaf-b24e-568c-9948-0a6dcd4cfe93"],
           "rule_id": "BH12846",
           "violations": 0
         },
@@ -1272,9 +1072,7 @@
           "description": "Contains HTTP header fields.",
           "occurrences": 1,
           "priority": 2,
-          "references": [
-            "023dcfaf-b24e-568c-9948-0a6dcd4cfe93"
-          ],
+          "references": ["023dcfaf-b24e-568c-9948-0a6dcd4cfe93"],
           "rule_id": "BH16327",
           "violations": 0
         },
@@ -1283,9 +1081,7 @@
           "description": "Retrieves the name of the user associated with the process.",
           "occurrences": 1,
           "priority": 7,
-          "references": [
-            "023dcfaf-b24e-568c-9948-0a6dcd4cfe93"
-          ],
+          "references": ["023dcfaf-b24e-568c-9948-0a6dcd4cfe93"],
           "rule_id": "BH19452",
           "violations": 0
         },
@@ -1303,9 +1099,7 @@
           "description": "Contains patterns identifying the constants related to the BLAKE-256 hash function.",
           "occurrences": 1,
           "priority": 1,
-          "references": [
-            "023dcfaf-b24e-568c-9948-0a6dcd4cfe93"
-          ],
+          "references": ["023dcfaf-b24e-568c-9948-0a6dcd4cfe93"],
           "rule_id": "BH13630",
           "violations": 0
         },
@@ -1314,9 +1108,7 @@
           "description": "Contains patterns identifying the constants related to the RIPEMD160 hash function.",
           "occurrences": 1,
           "priority": 1,
-          "references": [
-            "023dcfaf-b24e-568c-9948-0a6dcd4cfe93"
-          ],
+          "references": ["023dcfaf-b24e-568c-9948-0a6dcd4cfe93"],
           "rule_id": "BH13640",
           "violations": 0
         },
@@ -1325,9 +1117,7 @@
           "description": "Queries memory related information.",
           "occurrences": 1,
           "priority": 3,
-          "references": [
-            "023dcfaf-b24e-568c-9948-0a6dcd4cfe93"
-          ],
+          "references": ["023dcfaf-b24e-568c-9948-0a6dcd4cfe93"],
           "rule_id": "BH13428",
           "violations": 0
         },
@@ -1336,9 +1126,7 @@
           "description": "Plays a sound.",
           "occurrences": 1,
           "priority": 2,
-          "references": [
-            "023dcfaf-b24e-568c-9948-0a6dcd4cfe93"
-          ],
+          "references": ["023dcfaf-b24e-568c-9948-0a6dcd4cfe93"],
           "rule_id": "BH13424",
           "violations": 0
         },
@@ -1359,9 +1147,7 @@
           "description": "Terminates a process/thread.",
           "occurrences": 1,
           "priority": 3,
-          "references": [
-            "023dcfaf-b24e-568c-9948-0a6dcd4cfe93"
-          ],
+          "references": ["023dcfaf-b24e-568c-9948-0a6dcd4cfe93"],
           "rule_id": "BH12794",
           "violations": 0
         },
@@ -1370,9 +1156,7 @@
           "description": "Contains timestamp-related format strings.",
           "occurrences": 1,
           "priority": 1,
-          "references": [
-            "023dcfaf-b24e-568c-9948-0a6dcd4cfe93"
-          ],
+          "references": ["023dcfaf-b24e-568c-9948-0a6dcd4cfe93"],
           "rule_id": "BH13402",
           "violations": 0
         },
@@ -1381,9 +1165,7 @@
           "description": "Detects/enumerates process modules.",
           "occurrences": 1,
           "priority": 3,
-          "references": [
-            "023dcfaf-b24e-568c-9948-0a6dcd4cfe93"
-          ],
+          "references": ["023dcfaf-b24e-568c-9948-0a6dcd4cfe93"],
           "rule_id": "BH19545",
           "violations": 0
         },
@@ -1392,9 +1174,7 @@
           "description": "Creates a mutual exclusion (mutex) lock.",
           "occurrences": 1,
           "priority": 1,
-          "references": [
-            "023dcfaf-b24e-568c-9948-0a6dcd4cfe93"
-          ],
+          "references": ["023dcfaf-b24e-568c-9948-0a6dcd4cfe93"],
           "rule_id": "BH13414",
           "violations": 0
         },
@@ -1403,9 +1183,7 @@
           "description": "Contains patterns identifying the constants related to the SHA-1 hash function.",
           "occurrences": 1,
           "priority": 1,
-          "references": [
-            "023dcfaf-b24e-568c-9948-0a6dcd4cfe93"
-          ],
+          "references": ["023dcfaf-b24e-568c-9948-0a6dcd4cfe93"],
           "rule_id": "BH13643",
           "violations": 0
         },
@@ -1427,9 +1205,7 @@
           "description": "Contains patterns identifying the constants related to the MD4 hash function.",
           "occurrences": 1,
           "priority": 1,
-          "references": [
-            "023dcfaf-b24e-568c-9948-0a6dcd4cfe93"
-          ],
+          "references": ["023dcfaf-b24e-568c-9948-0a6dcd4cfe93"],
           "rule_id": "BH13637",
           "violations": 0
         },
@@ -1438,9 +1214,7 @@
           "description": "Contains patterns identifying the constants related to the Blowfish symmetric-key block cipher.",
           "occurrences": 1,
           "priority": 1,
-          "references": [
-            "023dcfaf-b24e-568c-9948-0a6dcd4cfe93"
-          ],
+          "references": ["023dcfaf-b24e-568c-9948-0a6dcd4cfe93"],
           "rule_id": "BH13651",
           "violations": 0
         },
@@ -1449,9 +1223,7 @@
           "description": "Queries the file type of a file.",
           "occurrences": 1,
           "priority": 3,
-          "references": [
-            "023dcfaf-b24e-568c-9948-0a6dcd4cfe93"
-          ],
+          "references": ["023dcfaf-b24e-568c-9948-0a6dcd4cfe93"],
           "rule_id": "BH13441",
           "violations": 0
         },
@@ -1460,9 +1232,7 @@
           "description": "Tampers with module search locations.",
           "occurrences": 1,
           "priority": 2,
-          "references": [
-            "023dcfaf-b24e-568c-9948-0a6dcd4cfe93"
-          ],
+          "references": ["023dcfaf-b24e-568c-9948-0a6dcd4cfe93"],
           "rule_id": "BH12678",
           "violations": 0
         },
@@ -1471,9 +1241,7 @@
           "description": "Retrieves the position of the mouse cursor.",
           "occurrences": 1,
           "priority": 2,
-          "references": [
-            "023dcfaf-b24e-568c-9948-0a6dcd4cfe93"
-          ],
+          "references": ["023dcfaf-b24e-568c-9948-0a6dcd4cfe93"],
           "rule_id": "BH13411",
           "violations": 0
         },
@@ -1482,9 +1250,7 @@
           "description": "Flushes the file's buffer to disk.",
           "occurrences": 1,
           "priority": 2,
-          "references": [
-            "023dcfaf-b24e-568c-9948-0a6dcd4cfe93"
-          ],
+          "references": ["023dcfaf-b24e-568c-9948-0a6dcd4cfe93"],
           "rule_id": "BH13407",
           "violations": 0
         },
@@ -1493,9 +1259,7 @@
           "description": "Loads additional networking APIs.",
           "occurrences": 2,
           "priority": 3,
-          "references": [
-            "023dcfaf-b24e-568c-9948-0a6dcd4cfe93"
-          ],
+          "references": ["023dcfaf-b24e-568c-9948-0a6dcd4cfe93"],
           "rule_id": "BH16334",
           "violations": 0
         },
@@ -1504,9 +1268,7 @@
           "description": "Enumerates system variables.",
           "occurrences": 1,
           "priority": 2,
-          "references": [
-            "023dcfaf-b24e-568c-9948-0a6dcd4cfe93"
-          ],
+          "references": ["023dcfaf-b24e-568c-9948-0a6dcd4cfe93"],
           "rule_id": "BH19547",
           "violations": 0
         },
@@ -1515,9 +1277,7 @@
           "description": "Contains patterns identifying the constants related to the BLAKE-512 hash function.",
           "occurrences": 1,
           "priority": 1,
-          "references": [
-            "023dcfaf-b24e-568c-9948-0a6dcd4cfe93"
-          ],
+          "references": ["023dcfaf-b24e-568c-9948-0a6dcd4cfe93"],
           "rule_id": "BH13632",
           "violations": 0
         },
@@ -1526,9 +1286,7 @@
           "description": "Reads data from the STDIN stream.",
           "occurrences": 1,
           "priority": 3,
-          "references": [
-            "023dcfaf-b24e-568c-9948-0a6dcd4cfe93"
-          ],
+          "references": ["023dcfaf-b24e-568c-9948-0a6dcd4cfe93"],
           "rule_id": "BH13432",
           "violations": 0
         },
@@ -1537,9 +1295,7 @@
           "description": "Reads from files.",
           "occurrences": 1,
           "priority": 2,
-          "references": [
-            "023dcfaf-b24e-568c-9948-0a6dcd4cfe93"
-          ],
+          "references": ["023dcfaf-b24e-568c-9948-0a6dcd4cfe93"],
           "rule_id": "BH13328",
           "violations": 0
         },
@@ -1548,9 +1304,7 @@
           "description": "Enumerates user locale information.",
           "occurrences": 1,
           "priority": 1,
-          "references": [
-            "023dcfaf-b24e-568c-9948-0a6dcd4cfe93"
-          ],
+          "references": ["023dcfaf-b24e-568c-9948-0a6dcd4cfe93"],
           "rule_id": "BH19548",
           "violations": 0
         },
@@ -1559,9 +1313,7 @@
           "description": "Queries the size of a file.",
           "occurrences": 1,
           "priority": 2,
-          "references": [
-            "023dcfaf-b24e-568c-9948-0a6dcd4cfe93"
-          ],
+          "references": ["023dcfaf-b24e-568c-9948-0a6dcd4cfe93"],
           "rule_id": "BH13410",
           "violations": 0
         },
@@ -1570,9 +1322,7 @@
           "description": "Retrieves text from the clipboard.",
           "occurrences": 1,
           "priority": 3,
-          "references": [
-            "023dcfaf-b24e-568c-9948-0a6dcd4cfe93"
-          ],
+          "references": ["023dcfaf-b24e-568c-9948-0a6dcd4cfe93"],
           "rule_id": "BH13272",
           "violations": 0
         },
@@ -1581,9 +1331,7 @@
           "description": "Releases a mutual exclusion (mutex) lock.",
           "occurrences": 1,
           "priority": 1,
-          "references": [
-            "023dcfaf-b24e-568c-9948-0a6dcd4cfe93"
-          ],
+          "references": ["023dcfaf-b24e-568c-9948-0a6dcd4cfe93"],
           "rule_id": "BH13415",
           "violations": 0
         },
@@ -1592,9 +1340,7 @@
           "description": "Loads additional APIs.",
           "occurrences": 1,
           "priority": 2,
-          "references": [
-            "023dcfaf-b24e-568c-9948-0a6dcd4cfe93"
-          ],
+          "references": ["023dcfaf-b24e-568c-9948-0a6dcd4cfe93"],
           "rule_id": "BH13334",
           "violations": 0
         },
@@ -1603,9 +1349,7 @@
           "description": "Contains patterns identifying the constants related to the SHA-512 hash function, from the SHA-2 hash family.",
           "occurrences": 1,
           "priority": 1,
-          "references": [
-            "023dcfaf-b24e-568c-9948-0a6dcd4cfe93"
-          ],
+          "references": ["023dcfaf-b24e-568c-9948-0a6dcd4cfe93"],
           "rule_id": "BH13647",
           "violations": 0
         },
@@ -1614,9 +1358,7 @@
           "description": "Contains a reference to a common dynamic library or an executable file.",
           "occurrences": 13,
           "priority": 1,
-          "references": [
-            "023dcfaf-b24e-568c-9948-0a6dcd4cfe93"
-          ],
+          "references": ["023dcfaf-b24e-568c-9948-0a6dcd4cfe93"],
           "rule_id": "BH13314",
           "violations": 0
         },
@@ -1625,9 +1367,7 @@
           "description": "Reads path to temporary file location on Windows.",
           "occurrences": 1,
           "priority": 4,
-          "references": [
-            "023dcfaf-b24e-568c-9948-0a6dcd4cfe93"
-          ],
+          "references": ["023dcfaf-b24e-568c-9948-0a6dcd4cfe93"],
           "rule_id": "BH13388",
           "violations": 0
         },
@@ -1636,9 +1376,7 @@
           "description": "Contains reference to kernel32.dll which is Windows NT BASE API Client DLL.",
           "occurrences": 1,
           "priority": 1,
-          "references": [
-            "023dcfaf-b24e-568c-9948-0a6dcd4cfe93"
-          ],
+          "references": ["023dcfaf-b24e-568c-9948-0a6dcd4cfe93"],
           "rule_id": "BH12842",
           "violations": 0
         },
@@ -1647,9 +1385,7 @@
           "description": "Tampers with keyboard/mouse status.",
           "occurrences": 1,
           "priority": 3,
-          "references": [
-            "023dcfaf-b24e-568c-9948-0a6dcd4cfe93"
-          ],
+          "references": ["023dcfaf-b24e-568c-9948-0a6dcd4cfe93"],
           "rule_id": "BH12670",
           "violations": 0
         },
@@ -1658,9 +1394,7 @@
           "description": "Contains patterns identifying the constants related to the HAVAL hash function.",
           "occurrences": 1,
           "priority": 1,
-          "references": [
-            "023dcfaf-b24e-568c-9948-0a6dcd4cfe93"
-          ],
+          "references": ["023dcfaf-b24e-568c-9948-0a6dcd4cfe93"],
           "rule_id": "BH13634",
           "violations": 0
         },
@@ -1669,9 +1403,7 @@
           "description": "Enumerates user/account privilege information.",
           "occurrences": 1,
           "priority": 4,
-          "references": [
-            "023dcfaf-b24e-568c-9948-0a6dcd4cfe93"
-          ],
+          "references": ["023dcfaf-b24e-568c-9948-0a6dcd4cfe93"],
           "rule_id": "BH19330",
           "violations": 0
         },
@@ -1680,9 +1412,7 @@
           "description": "Contains patterns identifying the constants related to the BLAKE-384 hash function.",
           "occurrences": 1,
           "priority": 1,
-          "references": [
-            "023dcfaf-b24e-568c-9948-0a6dcd4cfe93"
-          ],
+          "references": ["023dcfaf-b24e-568c-9948-0a6dcd4cfe93"],
           "rule_id": "BH13631",
           "violations": 0
         },
@@ -1691,9 +1421,7 @@
           "description": "Logs timestamped data to file.",
           "occurrences": 1,
           "priority": 2,
-          "references": [
-            "023dcfaf-b24e-568c-9948-0a6dcd4cfe93"
-          ],
+          "references": ["023dcfaf-b24e-568c-9948-0a6dcd4cfe93"],
           "rule_id": "BH13403",
           "violations": 0
         },
@@ -1702,9 +1430,7 @@
           "description": "Changes the size of a file.",
           "occurrences": 1,
           "priority": 3,
-          "references": [
-            "023dcfaf-b24e-568c-9948-0a6dcd4cfe93"
-          ],
+          "references": ["023dcfaf-b24e-568c-9948-0a6dcd4cfe93"],
           "rule_id": "BH13442",
           "violations": 0
         },
@@ -1713,9 +1439,7 @@
           "description": "Takes screenshots.",
           "occurrences": 1,
           "priority": 5,
-          "references": [
-            "023dcfaf-b24e-568c-9948-0a6dcd4cfe93"
-          ],
+          "references": ["023dcfaf-b24e-568c-9948-0a6dcd4cfe93"],
           "rule_id": "BH12590",
           "violations": 0
         },
@@ -1724,9 +1448,7 @@
           "description": "Uses pipes for interprocess communication.",
           "occurrences": 1,
           "priority": 2,
-          "references": [
-            "023dcfaf-b24e-568c-9948-0a6dcd4cfe93"
-          ],
+          "references": ["023dcfaf-b24e-568c-9948-0a6dcd4cfe93"],
           "rule_id": "BH13378",
           "violations": 0
         },
@@ -1735,9 +1457,7 @@
           "description": "Opens registry keys.",
           "occurrences": 1,
           "priority": 5,
-          "references": [
-            "023dcfaf-b24e-568c-9948-0a6dcd4cfe93"
-          ],
+          "references": ["023dcfaf-b24e-568c-9948-0a6dcd4cfe93"],
           "rule_id": "BH13288",
           "violations": 0
         },
@@ -1746,9 +1466,7 @@
           "description": "Tampers with system environment variables.",
           "occurrences": 1,
           "priority": 2,
-          "references": [
-            "023dcfaf-b24e-568c-9948-0a6dcd4cfe93"
-          ],
+          "references": ["023dcfaf-b24e-568c-9948-0a6dcd4cfe93"],
           "rule_id": "BH12739",
           "violations": 0
         },
@@ -1757,9 +1475,7 @@
           "description": "Contains URLs.",
           "occurrences": 1,
           "priority": 4,
-          "references": [
-            "023dcfaf-b24e-568c-9948-0a6dcd4cfe93"
-          ],
+          "references": ["023dcfaf-b24e-568c-9948-0a6dcd4cfe93"],
           "rule_id": "BH16331",
           "violations": 0
         },
@@ -1768,9 +1484,7 @@
           "description": "Enumerates the values of a registry key.",
           "occurrences": 1,
           "priority": 5,
-          "references": [
-            "023dcfaf-b24e-568c-9948-0a6dcd4cfe93"
-          ],
+          "references": ["023dcfaf-b24e-568c-9948-0a6dcd4cfe93"],
           "rule_id": "BH19456",
           "violations": 0
         },
@@ -1779,9 +1493,7 @@
           "description": "Contains patterns identifying the constants related to the base64 binary-to-text encoding algorithm.",
           "occurrences": 1,
           "priority": 1,
-          "references": [
-            "023dcfaf-b24e-568c-9948-0a6dcd4cfe93"
-          ],
+          "references": ["023dcfaf-b24e-568c-9948-0a6dcd4cfe93"],
           "rule_id": "BH13760",
           "violations": 0
         },
@@ -1790,9 +1502,7 @@
           "description": "Loads additional libraries.",
           "occurrences": 1,
           "priority": 2,
-          "references": [
-            "023dcfaf-b24e-568c-9948-0a6dcd4cfe93"
-          ],
+          "references": ["023dcfaf-b24e-568c-9948-0a6dcd4cfe93"],
           "rule_id": "BH12406",
           "violations": 0
         },
@@ -1801,9 +1511,7 @@
           "description": "Sets or updates the file pointer position within an open file.",
           "occurrences": 1,
           "priority": 1,
-          "references": [
-            "023dcfaf-b24e-568c-9948-0a6dcd4cfe93"
-          ],
+          "references": ["023dcfaf-b24e-568c-9948-0a6dcd4cfe93"],
           "rule_id": "BH13405",
           "violations": 0
         },
@@ -1812,9 +1520,7 @@
           "description": "Enumerates files.",
           "occurrences": 1,
           "priority": 2,
-          "references": [
-            "023dcfaf-b24e-568c-9948-0a6dcd4cfe93"
-          ],
+          "references": ["023dcfaf-b24e-568c-9948-0a6dcd4cfe93"],
           "rule_id": "BH19546",
           "violations": 0
         },
@@ -1823,9 +1529,7 @@
           "description": "Contains patterns identifying the constants related to the SHA-384 hash function, from the SHA-2 hash family.",
           "occurrences": 1,
           "priority": 1,
-          "references": [
-            "023dcfaf-b24e-568c-9948-0a6dcd4cfe93"
-          ],
+          "references": ["023dcfaf-b24e-568c-9948-0a6dcd4cfe93"],
           "rule_id": "BH13646",
           "violations": 0
         },
@@ -1834,9 +1538,7 @@
           "description": "Enumerates system information.",
           "occurrences": 1,
           "priority": 4,
-          "references": [
-            "023dcfaf-b24e-568c-9948-0a6dcd4cfe93"
-          ],
+          "references": ["023dcfaf-b24e-568c-9948-0a6dcd4cfe93"],
           "rule_id": "BH19295",
           "violations": 0
         },
@@ -1845,9 +1547,7 @@
           "description": "Contains reference to advapi32.dll which is Advanced Windows 32 Base API.",
           "occurrences": 1,
           "priority": 1,
-          "references": [
-            "023dcfaf-b24e-568c-9948-0a6dcd4cfe93"
-          ],
+          "references": ["023dcfaf-b24e-568c-9948-0a6dcd4cfe93"],
           "rule_id": "BH12838",
           "violations": 0
         },
@@ -1856,9 +1556,7 @@
           "description": "Accesses clipboard.",
           "occurrences": 1,
           "priority": 1,
-          "references": [
-            "023dcfaf-b24e-568c-9948-0a6dcd4cfe93"
-          ],
+          "references": ["023dcfaf-b24e-568c-9948-0a6dcd4cfe93"],
           "rule_id": "BH13350",
           "violations": 0
         },
@@ -1867,9 +1565,7 @@
           "description": "Monitors mouse activity.",
           "occurrences": 1,
           "priority": 2,
-          "references": [
-            "023dcfaf-b24e-568c-9948-0a6dcd4cfe93"
-          ],
+          "references": ["023dcfaf-b24e-568c-9948-0a6dcd4cfe93"],
           "rule_id": "BH13355",
           "violations": 0
         },
@@ -1878,9 +1574,7 @@
           "description": "Opens a file for reading or writing.",
           "occurrences": 1,
           "priority": 3,
-          "references": [
-            "023dcfaf-b24e-568c-9948-0a6dcd4cfe93"
-          ],
+          "references": ["023dcfaf-b24e-568c-9948-0a6dcd4cfe93"],
           "rule_id": "BH13401",
           "violations": 0
         },
@@ -1898,9 +1592,7 @@
           "description": "Contains patterns identifying the constants related to the Salsa20 stream cipher.",
           "occurrences": 1,
           "priority": 1,
-          "references": [
-            "023dcfaf-b24e-568c-9948-0a6dcd4cfe93"
-          ],
+          "references": ["023dcfaf-b24e-568c-9948-0a6dcd4cfe93"],
           "rule_id": "BH13682",
           "violations": 0
         },
@@ -1909,9 +1601,7 @@
           "description": "Reads from files in Windows system directories.",
           "occurrences": 1,
           "priority": 4,
-          "references": [
-            "023dcfaf-b24e-568c-9948-0a6dcd4cfe93"
-          ],
+          "references": ["023dcfaf-b24e-568c-9948-0a6dcd4cfe93"],
           "rule_id": "BH13336",
           "violations": 0
         },
@@ -1920,9 +1610,7 @@
           "description": "Contains patterns identifying the constants related to the MD5 hash function.",
           "occurrences": 1,
           "priority": 1,
-          "references": [
-            "023dcfaf-b24e-568c-9948-0a6dcd4cfe93"
-          ],
+          "references": ["023dcfaf-b24e-568c-9948-0a6dcd4cfe93"],
           "rule_id": "BH13638",
           "violations": 0
         },
@@ -1931,9 +1619,7 @@
           "description": "Deletes a file/directory.",
           "occurrences": 1,
           "priority": 4,
-          "references": [
-            "023dcfaf-b24e-568c-9948-0a6dcd4cfe93"
-          ],
+          "references": ["023dcfaf-b24e-568c-9948-0a6dcd4cfe93"],
           "rule_id": "BH12223",
           "violations": 0
         },
@@ -1942,9 +1628,7 @@
           "description": "Contains patterns identifying the constants related to the BLAKE2 hash function.",
           "occurrences": 1,
           "priority": 1,
-          "references": [
-            "023dcfaf-b24e-568c-9948-0a6dcd4cfe93"
-          ],
+          "references": ["023dcfaf-b24e-568c-9948-0a6dcd4cfe93"],
           "rule_id": "BH13628",
           "violations": 0
         },
@@ -1953,9 +1637,7 @@
           "description": "Accesses/modifies registry.",
           "occurrences": 1,
           "priority": 4,
-          "references": [
-            "023dcfaf-b24e-568c-9948-0a6dcd4cfe93"
-          ],
+          "references": ["023dcfaf-b24e-568c-9948-0a6dcd4cfe93"],
           "rule_id": "BH13330",
           "violations": 0
         },
@@ -1964,9 +1646,7 @@
           "description": "Contains generic SQL database queries.",
           "occurrences": 1,
           "priority": 3,
-          "references": [
-            "023dcfaf-b24e-568c-9948-0a6dcd4cfe93"
-          ],
+          "references": ["023dcfaf-b24e-568c-9948-0a6dcd4cfe93"],
           "rule_id": "BH13368",
           "violations": 0
         },
@@ -1975,9 +1655,7 @@
           "description": "Creates/opens files in Windows system directories.",
           "occurrences": 1,
           "priority": 4,
-          "references": [
-            "023dcfaf-b24e-568c-9948-0a6dcd4cfe93"
-          ],
+          "references": ["023dcfaf-b24e-568c-9948-0a6dcd4cfe93"],
           "rule_id": "BH13335",
           "violations": 0
         },
@@ -1986,9 +1664,7 @@
           "description": "Retrieves keyboard layout list.",
           "occurrences": 1,
           "priority": 2,
-          "references": [
-            "023dcfaf-b24e-568c-9948-0a6dcd4cfe93"
-          ],
+          "references": ["023dcfaf-b24e-568c-9948-0a6dcd4cfe93"],
           "rule_id": "BH13394",
           "violations": 0
         },
@@ -1997,9 +1673,7 @@
           "description": "Enumerates registry keys.",
           "occurrences": 1,
           "priority": 5,
-          "references": [
-            "023dcfaf-b24e-568c-9948-0a6dcd4cfe93"
-          ],
+          "references": ["023dcfaf-b24e-568c-9948-0a6dcd4cfe93"],
           "rule_id": "BH19536",
           "violations": 0
         },
@@ -2008,9 +1682,7 @@
           "description": "Deletes files in Windows system directories.",
           "occurrences": 1,
           "priority": 7,
-          "references": [
-            "023dcfaf-b24e-568c-9948-0a6dcd4cfe93"
-          ],
+          "references": ["023dcfaf-b24e-568c-9948-0a6dcd4cfe93"],
           "rule_id": "BH12237",
           "violations": 0
         },
@@ -2019,9 +1691,7 @@
           "description": "Gets the current working directory.",
           "occurrences": 1,
           "priority": 2,
-          "references": [
-            "023dcfaf-b24e-568c-9948-0a6dcd4cfe93"
-          ],
+          "references": ["023dcfaf-b24e-568c-9948-0a6dcd4cfe93"],
           "rule_id": "BH13419",
           "violations": 0
         },
@@ -2030,9 +1700,7 @@
           "description": "Executes a file.",
           "occurrences": 1,
           "priority": 6,
-          "references": [
-            "023dcfaf-b24e-568c-9948-0a6dcd4cfe93"
-          ],
+          "references": ["023dcfaf-b24e-568c-9948-0a6dcd4cfe93"],
           "rule_id": "BH13331",
           "violations": 0
         },
@@ -2041,9 +1709,7 @@
           "description": "Creates registry keys.",
           "occurrences": 1,
           "priority": 5,
-          "references": [
-            "023dcfaf-b24e-568c-9948-0a6dcd4cfe93"
-          ],
+          "references": ["023dcfaf-b24e-568c-9948-0a6dcd4cfe93"],
           "rule_id": "BH12216",
           "violations": 0
         },
@@ -2052,9 +1718,7 @@
           "description": "Detects presence of debuggers.",
           "occurrences": 1,
           "priority": 3,
-          "references": [
-            "023dcfaf-b24e-568c-9948-0a6dcd4cfe93"
-          ],
+          "references": ["023dcfaf-b24e-568c-9948-0a6dcd4cfe93"],
           "rule_id": "BH12805",
           "violations": 0
         },
@@ -2063,9 +1727,7 @@
           "description": "Creates/Opens a file.",
           "occurrences": 1,
           "priority": 1,
-          "references": [
-            "023dcfaf-b24e-568c-9948-0a6dcd4cfe93"
-          ],
+          "references": ["023dcfaf-b24e-568c-9948-0a6dcd4cfe93"],
           "rule_id": "BH13327",
           "violations": 0
         },
@@ -2074,9 +1736,7 @@
           "description": "Writes text to the clipboard.",
           "occurrences": 1,
           "priority": 2,
-          "references": [
-            "023dcfaf-b24e-568c-9948-0a6dcd4cfe93"
-          ],
+          "references": ["023dcfaf-b24e-568c-9948-0a6dcd4cfe93"],
           "rule_id": "BH13429",
           "violations": 0
         },
@@ -2085,9 +1745,7 @@
           "description": "Writes to files in Windows system directories.",
           "occurrences": 1,
           "priority": 5,
-          "references": [
-            "023dcfaf-b24e-568c-9948-0a6dcd4cfe93"
-          ],
+          "references": ["023dcfaf-b24e-568c-9948-0a6dcd4cfe93"],
           "rule_id": "BH12820",
           "violations": 0
         },
@@ -2096,9 +1754,7 @@
           "description": "Allocates additional memory in the calling process.",
           "occurrences": 1,
           "priority": 3,
-          "references": [
-            "023dcfaf-b24e-568c-9948-0a6dcd4cfe93"
-          ],
+          "references": ["023dcfaf-b24e-568c-9948-0a6dcd4cfe93"],
           "rule_id": "BH13404",
           "violations": 0
         },
@@ -2107,9 +1763,7 @@
           "description": "Checks operating system version.",
           "occurrences": 1,
           "priority": 5,
-          "references": [
-            "023dcfaf-b24e-568c-9948-0a6dcd4cfe93"
-          ],
+          "references": ["023dcfaf-b24e-568c-9948-0a6dcd4cfe93"],
           "rule_id": "BH13380",
           "violations": 0
         },
@@ -2118,9 +1772,7 @@
           "description": "Changes the current directory.",
           "occurrences": 1,
           "priority": 3,
-          "references": [
-            "023dcfaf-b24e-568c-9948-0a6dcd4cfe93"
-          ],
+          "references": ["023dcfaf-b24e-568c-9948-0a6dcd4cfe93"],
           "rule_id": "BH13423",
           "violations": 0
         },
@@ -2129,9 +1781,7 @@
           "description": "Closes a previously open registry key.",
           "occurrences": 1,
           "priority": 1,
-          "references": [
-            "023dcfaf-b24e-568c-9948-0a6dcd4cfe93"
-          ],
+          "references": ["023dcfaf-b24e-568c-9948-0a6dcd4cfe93"],
           "rule_id": "BH13406",
           "violations": 0
         },
@@ -2140,9 +1790,7 @@
           "description": "Contains a reference to ActiveX GUID with the Kill-Bit flag set.",
           "occurrences": 1,
           "priority": 5,
-          "references": [
-            "023dcfaf-b24e-568c-9948-0a6dcd4cfe93"
-          ],
+          "references": ["023dcfaf-b24e-568c-9948-0a6dcd4cfe93"],
           "rule_id": "BH13395",
           "violations": 0
         },
@@ -2151,9 +1799,7 @@
           "description": "Displays a dialog box with a message.",
           "occurrences": 1,
           "priority": 2,
-          "references": [
-            "023dcfaf-b24e-568c-9948-0a6dcd4cfe93"
-          ],
+          "references": ["023dcfaf-b24e-568c-9948-0a6dcd4cfe93"],
           "rule_id": "BH13408",
           "violations": 0
         },
@@ -2162,9 +1808,7 @@
           "description": "Reads paths to system directories on Windows.",
           "occurrences": 1,
           "priority": 4,
-          "references": [
-            "023dcfaf-b24e-568c-9948-0a6dcd4cfe93"
-          ],
+          "references": ["023dcfaf-b24e-568c-9948-0a6dcd4cfe93"],
           "rule_id": "BH13387",
           "violations": 0
         },
@@ -2173,9 +1817,7 @@
           "description": "Monitors keyboard strokes.",
           "occurrences": 1,
           "priority": 4,
-          "references": [
-            "023dcfaf-b24e-568c-9948-0a6dcd4cfe93"
-          ],
+          "references": ["023dcfaf-b24e-568c-9948-0a6dcd4cfe93"],
           "rule_id": "BH12432",
           "violations": 0
         },
@@ -2184,9 +1826,7 @@
           "description": "Closes a previously open file.",
           "occurrences": 1,
           "priority": 1,
-          "references": [
-            "023dcfaf-b24e-568c-9948-0a6dcd4cfe93"
-          ],
+          "references": ["023dcfaf-b24e-568c-9948-0a6dcd4cfe93"],
           "rule_id": "BH13434",
           "violations": 0
         },
@@ -2195,9 +1835,7 @@
           "description": "Accesses PuTTY registry keys.",
           "occurrences": 1,
           "priority": 2,
-          "references": [
-            "023dcfaf-b24e-568c-9948-0a6dcd4cfe93"
-          ],
+          "references": ["023dcfaf-b24e-568c-9948-0a6dcd4cfe93"],
           "rule_id": "BH17301",
           "violations": 0
         }
@@ -2226,9 +1864,7 @@
           "enabled": true,
           "priority": 3,
           "references": {
-            "component": [
-              "023dcfaf-b24e-568c-9948-0a6dcd4cfe93"
-            ]
+            "component": ["023dcfaf-b24e-568c-9948-0a6dcd4cfe93"]
           },
           "rule_id": "SQ20119",
           "severity": "low",
@@ -2248,9 +1884,7 @@
           "enabled": true,
           "priority": 2,
           "references": {
-            "component": [
-              "023dcfaf-b24e-568c-9948-0a6dcd4cfe93"
-            ]
+            "component": ["023dcfaf-b24e-568c-9948-0a6dcd4cfe93"]
           },
           "rule_id": "SQ31106",
           "severity": "medium",
@@ -2270,9 +1904,7 @@
           "enabled": true,
           "priority": 3,
           "references": {
-            "component": [
-              "023dcfaf-b24e-568c-9948-0a6dcd4cfe93"
-            ]
+            "component": ["023dcfaf-b24e-568c-9948-0a6dcd4cfe93"]
           },
           "rule_id": "SQ14127",
           "severity": "low",
@@ -2292,9 +1924,7 @@
           "enabled": true,
           "priority": 3,
           "references": {
-            "component": [
-              "023dcfaf-b24e-568c-9948-0a6dcd4cfe93"
-            ]
+            "component": ["023dcfaf-b24e-568c-9948-0a6dcd4cfe93"]
           },
           "rule_id": "SQ14122",
           "severity": "medium",
@@ -2338,9 +1968,7 @@
           "enabled": true,
           "priority": 4,
           "references": {
-            "component": [
-              "023dcfaf-b24e-568c-9948-0a6dcd4cfe93"
-            ]
+            "component": ["023dcfaf-b24e-568c-9948-0a6dcd4cfe93"]
           },
           "rule_id": "SQ20121",
           "severity": "low",
@@ -2358,52 +1986,21 @@
           "cvss": {
             "baseScore": "5.9",
             "metrics": [
-              [
-                "Attack Vector",
-                "Network"
-              ],
-              [
-                "Attack Complexity",
-                "High"
-              ],
-              [
-                "Privileges Required",
-                "None"
-              ],
-              [
-                "User Interaction",
-                "None"
-              ],
-              [
-                "Scope",
-                "Unchanged"
-              ],
-              [
-                "Confidentiality Impact",
-                "High"
-              ],
-              [
-                "Integrity Impact",
-                "None"
-              ],
-              [
-                "Availability Impact",
-                "None"
-              ]
+              ["Attack Vector", "Network"],
+              ["Attack Complexity", "High"],
+              ["Privileges Required", "None"],
+              ["User Interaction", "None"],
+              ["Scope", "Unchanged"],
+              ["Confidentiality Impact", "High"],
+              ["Integrity Impact", "None"],
+              ["Availability Impact", "None"]
             ],
             "version": 3
           },
-          "exploit": [
-            "EXISTS",
-            "FIXABLE"
-          ],
+          "exploit": ["EXISTS", "FIXABLE"],
           "name": "",
-          "sources": [
-            "NVD"
-          ],
-          "violations": [
-            "SQ31106"
-          ]
+          "sources": ["NVD"],
+          "violations": ["SQ31106"]
         }
       }
     }

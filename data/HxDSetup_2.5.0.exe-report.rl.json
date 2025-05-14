@@ -28,14 +28,8 @@
         },
         "format": "InnoSetup",
         "hashes": [
-          [
-            "md5",
-            "4f9e75a41d02666cd5cc86bd33a578fe"
-          ],
-          [
-            "sha1",
-            "ac08b28e953d7d200bbb3c2e644890a689d0d8b1"
-          ],
+          ["md5", "4f9e75a41d02666cd5cc86bd33a578fe"],
+          ["sha1", "ac08b28e953d7d200bbb3c2e644890a689d0d8b1"],
           [
             "sha256",
             "dccfa4b16aa79e273cc7ffc35493c495a7fd09f92a4b790f2dc41c65f64d5378"
@@ -162,39 +156,28 @@
               "label": "execution hijacking concerns",
               "priority": 1,
               "status": "warning",
-              "violations": [
-                "SQ14156",
-                "SQ14157",
-                "SQ14159"
-              ]
+              "violations": ["SQ14156", "SQ14157", "SQ14159"]
             },
             {
               "count": 37,
               "label": "modern mitigations missing",
               "priority": 3,
               "status": "warning",
-              "violations": [
-                "SQ14122"
-              ]
+              "violations": ["SQ14122"]
             },
             {
               "count": 36,
               "label": "reduced effectiveness mitigations",
               "priority": 3,
               "status": "warning",
-              "violations": [
-                "SQ14106",
-                "SQ14109"
-              ]
+              "violations": ["SQ14106", "SQ14109"]
             }
           ],
           "final": false,
           "label": "ineffective mitigations detected",
           "priority": 1,
           "status": "warning",
-          "violations": [
-            "SQ14107"
-          ]
+          "violations": ["SQ14107"]
         },
         "licenses": {
           "count": 0,
@@ -240,27 +223,21 @@
               "label": "critical severity vulnerabilities",
               "priority": 0,
               "status": "fail",
-              "violations": [
-                "SQ31104"
-              ]
+              "violations": ["SQ31104"]
             },
             {
               "count": 3,
               "label": "high severity vulnerabilities",
               "priority": 1,
               "status": "warning",
-              "violations": [
-                "SQ31105"
-              ]
+              "violations": ["SQ31105"]
             }
           ],
           "final": true,
           "label": "severe vulnerabilities exploited",
           "priority": 0,
           "status": "fail",
-          "violations": [
-            "SQ31102"
-          ]
+          "violations": ["SQ31102"]
         }
       },
       "components": {
@@ -271,14 +248,8 @@
           },
           "format": "",
           "hashes": [
-            [
-              "md5",
-              "86408be71abc0d8cbd60914e51500ef0"
-            ],
-            [
-              "sha1",
-              "eac1d136f9ec432fa0256c4aab53ec5e84db2f85"
-            ],
+            ["md5", "86408be71abc0d8cbd60914e51500ef0"],
+            ["sha1", "eac1d136f9ec432fa0256c4aab53ec5e84db2f85"],
             [
               "sha256",
               "0c0d54b28674f9311e7dc9b164bc711d04ed1f1281ac3e8ea5a1435ed1c4bad9"
@@ -353,14 +324,8 @@
           },
           "format": "",
           "hashes": [
-            [
-              "md5",
-              "8c9b29e184e663553b666161d47e1c36"
-            ],
-            [
-              "sha1",
-              "497aeb424c5fc44112e056429e41bcf8cd8b8541"
-            ],
+            ["md5", "8c9b29e184e663553b666161d47e1c36"],
+            ["sha1", "497aeb424c5fc44112e056429e41bcf8cd8b8541"],
             [
               "sha256",
               "b3abd6c443a31a91ff809f8201129091d43b9bc3e8a08b19d993288feffb98ef"
@@ -435,14 +400,8 @@
           },
           "format": "InnoSetup",
           "hashes": [
-            [
-              "md5",
-              "4f9e75a41d02666cd5cc86bd33a578fe"
-            ],
-            [
-              "sha1",
-              "ac08b28e953d7d200bbb3c2e644890a689d0d8b1"
-            ],
+            ["md5", "4f9e75a41d02666cd5cc86bd33a578fe"],
+            ["sha1", "ac08b28e953d7d200bbb3c2e644890a689d0d8b1"],
             [
               "sha256",
               "dccfa4b16aa79e273cc7ffc35493c495a7fd09f92a4b790f2dc41c65f64d5378"
@@ -498,14 +457,8 @@
           },
           "format": "",
           "hashes": [
-            [
-              "md5",
-              "8ba900815ae5cc14e93c9750b9813a6e"
-            ],
-            [
-              "sha1",
-              "56eb711e54d037608ba6594bf647aa4290e40d16"
-            ],
+            ["md5", "8ba900815ae5cc14e93c9750b9813a6e"],
+            ["sha1", "56eb711e54d037608ba6594bf647aa4290e40d16"],
             [
               "sha256",
               "7ecaa82768d3975d151d0272710b7c746120fa02984e2f7079a85e2b8f20b496"
@@ -580,14 +533,8 @@
           },
           "format": "",
           "hashes": [
-            [
-              "md5",
-              "15244cee258b6800a5b0154bfae0613f"
-            ],
-            [
-              "sha1",
-              "1e4df80347df7a0836eb02e8b949bae01c2ac914"
-            ],
+            ["md5", "15244cee258b6800a5b0154bfae0613f"],
+            ["sha1", "1e4df80347df7a0836eb02e8b949bae01c2ac914"],
             [
               "sha256",
               "9adc323ef69dfedb112d08346e2a84c529a3967a536a64a17754b934f8a24e77"
@@ -662,14 +609,8 @@
           },
           "format": "",
           "hashes": [
-            [
-              "md5",
-              "c62e43495d157682feab49f48f2a9507"
-            ],
-            [
-              "sha1",
-              "95b39081e155c8eebcae641a3a25471f462aaead"
-            ],
+            ["md5", "c62e43495d157682feab49f48f2a9507"],
+            ["sha1", "95b39081e155c8eebcae641a3a25471f462aaead"],
             [
               "sha256",
               "55d455e059211e5523d52abfb18ba1d310a75ff7c1f7a5f88c7ae99e7c104aa1"
@@ -744,14 +685,8 @@
           },
           "format": "",
           "hashes": [
-            [
-              "md5",
-              "547b7672f1aaa5138ac6a82637c12940"
-            ],
-            [
-              "sha1",
-              "df2eabe595a5b4ea1167c970e2bdb1caf24c617a"
-            ],
+            ["md5", "547b7672f1aaa5138ac6a82637c12940"],
+            ["sha1", "df2eabe595a5b4ea1167c970e2bdb1caf24c617a"],
             [
               "sha256",
               "0b16d8d5bd1a46da689d1d79d63e2c16a3ddbc6ae410f2e614c25a55de311fa0"
@@ -826,14 +761,8 @@
           },
           "format": "",
           "hashes": [
-            [
-              "md5",
-              "8a526f8e13342fb6925eed4999db7e61"
-            ],
-            [
-              "sha1",
-              "f697bfcc1e99134453bb2789025655f3fdf160e6"
-            ],
+            ["md5", "8a526f8e13342fb6925eed4999db7e61"],
+            ["sha1", "f697bfcc1e99134453bb2789025655f3fdf160e6"],
             [
               "sha256",
               "c01acf301fc4d4a94ee359d17ab0ea8db39ac4bf85f2742b105d6295b1c275d2"
@@ -908,14 +837,8 @@
           },
           "format": "",
           "hashes": [
-            [
-              "md5",
-              "0950aaa85b821d1421ec44e6cb5c750e"
-            ],
-            [
-              "sha1",
-              "d0799c30d481c4d225ac7c9e333b40fecaf08144"
-            ],
+            ["md5", "0950aaa85b821d1421ec44e6cb5c750e"],
+            ["sha1", "d0799c30d481c4d225ac7c9e333b40fecaf08144"],
             [
               "sha256",
               "9d73eb87c05656189d12442a11617b361c9716bd3c9d982aa7805acde7dd9e80"
@@ -990,14 +913,8 @@
           },
           "format": "",
           "hashes": [
-            [
-              "md5",
-              "7eb5e500057ae60d9ad0c967969f4a90"
-            ],
-            [
-              "sha1",
-              "c46e9371d681893ee1cce714dc8394d198f0b120"
-            ],
+            ["md5", "7eb5e500057ae60d9ad0c967969f4a90"],
+            ["sha1", "c46e9371d681893ee1cce714dc8394d198f0b120"],
             [
               "sha256",
               "1d70d0c34e83e6070c805df331677c6c9aed1a0a8ba98b9b410f58be6ece6969"
@@ -1072,14 +989,8 @@
           },
           "format": "",
           "hashes": [
-            [
-              "md5",
-              "f2296bd70c2b8c1af8445388203b68e6"
-            ],
-            [
-              "sha1",
-              "a21045d1becffae9d77bbaff08efffc6ccc3d4f7"
-            ],
+            ["md5", "f2296bd70c2b8c1af8445388203b68e6"],
+            ["sha1", "a21045d1becffae9d77bbaff08efffc6ccc3d4f7"],
             [
               "sha256",
               "8e075861530671825c43c1517e984bc87740175dcebb8be072a8b1a13b2fa737"
@@ -1154,14 +1065,8 @@
           },
           "format": "",
           "hashes": [
-            [
-              "md5",
-              "8fa26cbc60ee24fcc0dc1402cde8cb66"
-            ],
-            [
-              "sha1",
-              "6f39520d877163216b530018d1121fca0f2e0113"
-            ],
+            ["md5", "8fa26cbc60ee24fcc0dc1402cde8cb66"],
+            ["sha1", "6f39520d877163216b530018d1121fca0f2e0113"],
             [
               "sha256",
               "65502c37ff064f6a505b7314d3629d0c317b7ed7681f80c09ff9e29c22676eae"
@@ -1236,14 +1141,8 @@
           },
           "format": "",
           "hashes": [
-            [
-              "md5",
-              "2c9626cc7c153b6be8763d60c32d06f2"
-            ],
-            [
-              "sha1",
-              "fcbf7d8300b63305533c960ae9f8eace98ce6436"
-            ],
+            ["md5", "2c9626cc7c153b6be8763d60c32d06f2"],
+            ["sha1", "fcbf7d8300b63305533c960ae9f8eace98ce6436"],
             [
               "sha256",
               "708d1d6c5a959a300e08be360b0016e1d6a3c27e06bf856f39f908b13524433d"
@@ -1318,14 +1217,8 @@
           },
           "format": "",
           "hashes": [
-            [
-              "md5",
-              "726793333c1584d0734087c7d593146e"
-            ],
-            [
-              "sha1",
-              "e15c193189dbca293043c7bf427d1e72810df88d"
-            ],
+            ["md5", "726793333c1584d0734087c7d593146e"],
+            ["sha1", "e15c193189dbca293043c7bf427d1e72810df88d"],
             [
               "sha256",
               "676627d9847a0de280b98d7dacc69a052de1950c701f59245b02cee3508e6bac"
@@ -1400,14 +1293,8 @@
           },
           "format": "",
           "hashes": [
-            [
-              "md5",
-              "3a51094616bfd95757e8af9cbac64d49"
-            ],
-            [
-              "sha1",
-              "5b6dbb559ccf73947b7dbb4f3ec75b2058a82042"
-            ],
+            ["md5", "3a51094616bfd95757e8af9cbac64d49"],
+            ["sha1", "5b6dbb559ccf73947b7dbb4f3ec75b2058a82042"],
             [
               "sha256",
               "e555e5cfc5d8dc4d79764f156cc867bc2ef4ca5db1b13f2eb78e3209b1b5f913"
@@ -1482,14 +1369,8 @@
           },
           "format": "",
           "hashes": [
-            [
-              "md5",
-              "d9f9cdc046444f8f5d2e52ace3357cba"
-            ],
-            [
-              "sha1",
-              "e25a7cb6c9d87592aa9a1b6b0087c696bf46436d"
-            ],
+            ["md5", "d9f9cdc046444f8f5d2e52ace3357cba"],
+            ["sha1", "e25a7cb6c9d87592aa9a1b6b0087c696bf46436d"],
             [
               "sha256",
               "835fd673f5747291ed919a5a90ab47145f8ad103af1b64be848dc08b1b3529b0"
@@ -1564,14 +1445,8 @@
           },
           "format": "",
           "hashes": [
-            [
-              "md5",
-              "7abb925005b413169d0605c4ef1c9261"
-            ],
-            [
-              "sha1",
-              "10f71e1106f137ec191920847131f3e1c403e71b"
-            ],
+            ["md5", "7abb925005b413169d0605c4ef1c9261"],
+            ["sha1", "10f71e1106f137ec191920847131f3e1c403e71b"],
             [
               "sha256",
               "56b59a0d0dcbbba888b310570e6dceeddf6bbdd89e5814cc67b8904502e1cbf0"
@@ -1646,14 +1521,8 @@
           },
           "format": "",
           "hashes": [
-            [
-              "md5",
-              "96b5dbb32435c6091daff803d1037745"
-            ],
-            [
-              "sha1",
-              "cc69bb551cd1960618d2140bfff21f9e9516d813"
-            ],
+            ["md5", "96b5dbb32435c6091daff803d1037745"],
+            ["sha1", "cc69bb551cd1960618d2140bfff21f9e9516d813"],
             [
               "sha256",
               "a534d14ca56dbd36af7e9b92408123d3b7da0616d446b1384f48cf735d18f7fc"
@@ -1728,14 +1597,8 @@
           },
           "format": "",
           "hashes": [
-            [
-              "md5",
-              "f25dd61e7f3282794ba17c8cf3128cc9"
-            ],
-            [
-              "sha1",
-              "cb599c8e63333e1d91a6847d32d1e5deab0cbc75"
-            ],
+            ["md5", "f25dd61e7f3282794ba17c8cf3128cc9"],
+            ["sha1", "cb599c8e63333e1d91a6847d32d1e5deab0cbc75"],
             [
               "sha256",
               "1ffdf43145eb04bd767a63895dcede3432c5f38541a88b1af0628500b5caf87c"
@@ -1810,14 +1673,8 @@
           },
           "format": "",
           "hashes": [
-            [
-              "md5",
-              "4aa445166eb0d6b42ee020a5faf1420a"
-            ],
-            [
-              "sha1",
-              "40794e547f1b111a942acca7158a2d6eea6fe162"
-            ],
+            ["md5", "4aa445166eb0d6b42ee020a5faf1420a"],
+            ["sha1", "40794e547f1b111a942acca7158a2d6eea6fe162"],
             [
               "sha256",
               "da5508376db89ee84dc8b6591df258c62c69111cbca8dbd339312b70c3ae5370"
@@ -1892,14 +1749,8 @@
           },
           "format": "",
           "hashes": [
-            [
-              "md5",
-              "804f06b24fba7ba4e1122faf2b119a2b"
-            ],
-            [
-              "sha1",
-              "2abcc71c782eb15e671abe049adb0f2f943f085b"
-            ],
+            ["md5", "804f06b24fba7ba4e1122faf2b119a2b"],
+            ["sha1", "2abcc71c782eb15e671abe049adb0f2f943f085b"],
             [
               "sha256",
               "1fc927cb6747c105d1a66e4792f166b857a9e42bc1b58a08a6698c2d05e62087"
@@ -1974,14 +1825,8 @@
           },
           "format": "",
           "hashes": [
-            [
-              "md5",
-              "80e460305cffd553c88ee2b29d59c7e1"
-            ],
-            [
-              "sha1",
-              "c8c14e10b5a20c39f57771a39e44fb793c4f1e0a"
-            ],
+            ["md5", "80e460305cffd553c88ee2b29d59c7e1"],
+            ["sha1", "c8c14e10b5a20c39f57771a39e44fb793c4f1e0a"],
             [
               "sha256",
               "78da2002b12445485dffd2dca7e679a722c47f03175baab9be3fa43cdffb7607"
@@ -2056,14 +1901,8 @@
           },
           "format": "",
           "hashes": [
-            [
-              "md5",
-              "57cdc42a90fa3983ba77265a119d76ea"
-            ],
-            [
-              "sha1",
-              "5c404d93aa766606628d61dbc94e4a01a29875c9"
-            ],
+            ["md5", "57cdc42a90fa3983ba77265a119d76ea"],
+            ["sha1", "5c404d93aa766606628d61dbc94e4a01a29875c9"],
             [
               "sha256",
               "778f19fc756419447553baa2d834d0857c6029f2278caa24cfb465f3e75c2128"
@@ -2138,14 +1977,8 @@
           },
           "format": "",
           "hashes": [
-            [
-              "md5",
-              "4c3d7a80055830d8be869157110eb9b3"
-            ],
-            [
-              "sha1",
-              "f2555b7eecfb3eed684eb57a6cdf5ab4dc2ff0d5"
-            ],
+            ["md5", "4c3d7a80055830d8be869157110eb9b3"],
+            ["sha1", "f2555b7eecfb3eed684eb57a6cdf5ab4dc2ff0d5"],
             [
               "sha256",
               "ae742195737cd0a7038b9e02d7163a334aeaae7ac983e387701d257dda9b950d"
@@ -2220,14 +2053,8 @@
           },
           "format": "",
           "hashes": [
-            [
-              "md5",
-              "14fca45f383b3de689d38f45c283f71f"
-            ],
-            [
-              "sha1",
-              "5cb16e51c3bb3c63613ffd6d77505db7c5aa4ed6"
-            ],
+            ["md5", "14fca45f383b3de689d38f45c283f71f"],
+            ["sha1", "5cb16e51c3bb3c63613ffd6d77505db7c5aa4ed6"],
             [
               "sha256",
               "9d460040a454deeb3fe69300fe6b9017350e1efcb1f52f7f14a4702d96cb45ca"
@@ -2302,14 +2129,8 @@
           },
           "format": "",
           "hashes": [
-            [
-              "md5",
-              "8cd36722b01aceb724091db31bd3fcba"
-            ],
-            [
-              "sha1",
-              "3045004716de95a535dd8797bb2ece392fdae809"
-            ],
+            ["md5", "8cd36722b01aceb724091db31bd3fcba"],
+            ["sha1", "3045004716de95a535dd8797bb2ece392fdae809"],
             [
               "sha256",
               "5dadccdf141b321ce5e278ae6930904adc47f53a06cd129a4655db4dcc3f6aee"
@@ -2384,14 +2205,8 @@
           },
           "format": "",
           "hashes": [
-            [
-              "md5",
-              "82afb6af67fc5e5ddf96c640b92f54c9"
-            ],
-            [
-              "sha1",
-              "ee62dbd34d88eb4ddb84061a94f6e49bdce879e3"
-            ],
+            ["md5", "82afb6af67fc5e5ddf96c640b92f54c9"],
+            ["sha1", "ee62dbd34d88eb4ddb84061a94f6e49bdce879e3"],
             [
               "sha256",
               "44b7cc8efd42c8b1e9173557f18c0284acd82144f91f0734b7674ab7b3dca579"
@@ -2466,14 +2281,8 @@
           },
           "format": "",
           "hashes": [
-            [
-              "md5",
-              "afdb86a4b1a28d1b44b5f97358b8fc2a"
-            ],
-            [
-              "sha1",
-              "0648f4c9776e77c338ab1b06cb926dc9dcbe10fd"
-            ],
+            ["md5", "afdb86a4b1a28d1b44b5f97358b8fc2a"],
+            ["sha1", "0648f4c9776e77c338ab1b06cb926dc9dcbe10fd"],
             [
               "sha256",
               "926525237d78317e51cba71f9f167fe21c38af7aaa06357433ddf28e75122b31"
@@ -2548,14 +2357,8 @@
           },
           "format": "",
           "hashes": [
-            [
-              "md5",
-              "0719a4514524f161ceb8a9e47713e4e6"
-            ],
-            [
-              "sha1",
-              "af1ceefb86ded0c483c2a3f2f047fa1c3ecb4868"
-            ],
+            ["md5", "0719a4514524f161ceb8a9e47713e4e6"],
+            ["sha1", "af1ceefb86ded0c483c2a3f2f047fa1c3ecb4868"],
             [
               "sha256",
               "03e101d5d65377d559680848648ffa4c111d32d128b6e89dde8b441de7b6bf8e"
@@ -2630,14 +2433,8 @@
           },
           "format": "",
           "hashes": [
-            [
-              "md5",
-              "ac4b3fe3f26fdeceed597d1909d3cdb2"
-            ],
-            [
-              "sha1",
-              "04988c1b5558d22ca2fdd3067ea2ae924e88c756"
-            ],
+            ["md5", "ac4b3fe3f26fdeceed597d1909d3cdb2"],
+            ["sha1", "04988c1b5558d22ca2fdd3067ea2ae924e88c756"],
             [
               "sha256",
               "32ee2c69fd8971b60a11a2923261340ae08e534dcf493a7b50143ced974f616b"
@@ -2712,14 +2509,8 @@
           },
           "format": "",
           "hashes": [
-            [
-              "md5",
-              "777b31623fbc16a57abab57818e598b8"
-            ],
-            [
-              "sha1",
-              "775dc4053f7964ba3ca3318193f0845d6cf415ed"
-            ],
+            ["md5", "777b31623fbc16a57abab57818e598b8"],
+            ["sha1", "775dc4053f7964ba3ca3318193f0845d6cf415ed"],
             [
               "sha256",
               "6b981d953c0f95f7fe4dd8d633127b0a27010ebd07dfe82fda34be581a4b7905"
@@ -2794,14 +2585,8 @@
           },
           "format": "",
           "hashes": [
-            [
-              "md5",
-              "461ed1d1fea1680514fdb248b53acf20"
-            ],
-            [
-              "sha1",
-              "4017c14132132c9fe7a7be443b091846508b39ce"
-            ],
+            ["md5", "461ed1d1fea1680514fdb248b53acf20"],
+            ["sha1", "4017c14132132c9fe7a7be443b091846508b39ce"],
             [
               "sha256",
               "f1fc564a986e238bad0c1aae1b46eed4877bf7e02239ae311a3e29750cd9d735"
@@ -2876,14 +2661,8 @@
           },
           "format": "",
           "hashes": [
-            [
-              "md5",
-              "ac2845019652ad1b3db7f6dd37fa934e"
-            ],
-            [
-              "sha1",
-              "fae0b4e406561127bbf17eb043b42b9e1f9854a9"
-            ],
+            ["md5", "ac2845019652ad1b3db7f6dd37fa934e"],
+            ["sha1", "fae0b4e406561127bbf17eb043b42b9e1f9854a9"],
             [
               "sha256",
               "42578a70bb3de07b64402b15c9e482df7080aab8647e85f9f8aac4ce9e85027d"
@@ -2958,14 +2737,8 @@
           },
           "format": "",
           "hashes": [
-            [
-              "md5",
-              "e5f64e0e820b54c8c344c0bf25468a66"
-            ],
-            [
-              "sha1",
-              "3d23f6358a20750be8ca2cdfb5dcbd49d766728a"
-            ],
+            ["md5", "e5f64e0e820b54c8c344c0bf25468a66"],
+            ["sha1", "3d23f6358a20750be8ca2cdfb5dcbd49d766728a"],
             [
               "sha256",
               "9f3716cdcbe2f4a13238b07c85219b2e3b10245e43535e0cbca8a5caa3afc1b6"
@@ -3040,14 +2813,8 @@
           },
           "format": "",
           "hashes": [
-            [
-              "md5",
-              "664c5f771e9611f23f4bfd0809320637"
-            ],
-            [
-              "sha1",
-              "cff6cf96a65e846affc18ea8222c1eb37b33f762"
-            ],
+            ["md5", "664c5f771e9611f23f4bfd0809320637"],
+            ["sha1", "cff6cf96a65e846affc18ea8222c1eb37b33f762"],
             [
               "sha256",
               "7ab6c6caff1dd610f9c8cfd54ed78b593c584f15ffd811ef19234f6cf6b7d114"
@@ -3122,14 +2889,8 @@
           },
           "format": "",
           "hashes": [
-            [
-              "md5",
-              "c2d3b388f4e8b689204a2a2903e00bd5"
-            ],
-            [
-              "sha1",
-              "5fd680082812117d0a54ee0d7823c819e74f1d93"
-            ],
+            ["md5", "c2d3b388f4e8b689204a2a2903e00bd5"],
+            ["sha1", "5fd680082812117d0a54ee0d7823c819e74f1d93"],
             [
               "sha256",
               "ca2c323eb8c9308be61988051b84f312b5428584c710d23030f0016a80be0b56"
@@ -3204,14 +2965,8 @@
           },
           "format": "",
           "hashes": [
-            [
-              "md5",
-              "cf48eaed47b80bdfb58847388d158d7c"
-            ],
-            [
-              "sha1",
-              "64e7d236d2d3321a54b9dc2d0061723bf1827628"
-            ],
+            ["md5", "cf48eaed47b80bdfb58847388d158d7c"],
+            ["sha1", "64e7d236d2d3321a54b9dc2d0061723bf1827628"],
             [
               "sha256",
               "fcf5d58bbedae7b3e5952f65a60378f563409c3716e4069ad195a070c30fd57f"
@@ -3283,9 +3038,7 @@
       "cryptography": {
         "algorithms": {
           "146a1a75-45e5-4a80-85b3-dfa147dd4fd0": {
-            "functions": [
-              "digest"
-            ],
+            "functions": ["digest"],
             "mode": "unknown",
             "pqc_level": 0,
             "primitive": "hash",
@@ -3331,16 +3084,12 @@
               ]
             },
             "size": 128,
-            "sources": [
-              "pattern"
-            ],
+            "sources": ["pattern"],
             "type": "md5",
             "violations": []
           },
           "3aedd4d1-56e6-4332-84fd-35432efa65ea": {
-            "functions": [
-              "digest"
-            ],
+            "functions": ["digest"],
             "mode": "unknown",
             "pqc_level": 0,
             "primitive": "hash",
@@ -3386,16 +3135,12 @@
               ]
             },
             "size": 224,
-            "sources": [
-              "pattern"
-            ],
+            "sources": ["pattern"],
             "type": "sha224",
             "violations": []
           },
           "54659ff3-7b4b-4b48-bbe7-15f2ab7394fa": {
-            "functions": [
-              "digest"
-            ],
+            "functions": ["digest"],
             "mode": "unknown",
             "pqc_level": 4,
             "primitive": "hash",
@@ -3423,16 +3168,12 @@
               ]
             },
             "size": 384,
-            "sources": [
-              "pattern"
-            ],
+            "sources": ["pattern"],
             "type": "sha384",
             "violations": []
           },
           "843939d5-ccde-4d83-bced-3596dedd307e": {
-            "functions": [
-              "digest"
-            ],
+            "functions": ["digest"],
             "mode": "unknown",
             "pqc_level": 0,
             "primitive": "hash",
@@ -3478,16 +3219,12 @@
               ]
             },
             "size": 128,
-            "sources": [
-              "pattern"
-            ],
+            "sources": ["pattern"],
             "type": "md4",
             "violations": []
           },
           "8ca927ae-c43a-47a1-9a59-37a6e286731b": {
-            "functions": [
-              "digest"
-            ],
+            "functions": ["digest"],
             "mode": "unknown",
             "pqc_level": 0,
             "primitive": "hash",
@@ -3533,16 +3270,12 @@
               ]
             },
             "size": 128,
-            "sources": [
-              "pattern"
-            ],
+            "sources": ["pattern"],
             "type": "md2",
             "violations": []
           },
           "966f7043-eace-4c0c-8a88-b1b4bc4abd9b": {
-            "functions": [
-              "digest"
-            ],
+            "functions": ["digest"],
             "mode": "unknown",
             "pqc_level": 2,
             "primitive": "hash",
@@ -3588,16 +3321,12 @@
               ]
             },
             "size": 256,
-            "sources": [
-              "pattern"
-            ],
+            "sources": ["pattern"],
             "type": "sha256",
             "violations": []
           },
           "9746fa00-f796-4c6f-8694-70389701d7a3": {
-            "functions": [
-              "digest"
-            ],
+            "functions": ["digest"],
             "mode": "unknown",
             "pqc_level": 5,
             "primitive": "hash",
@@ -3643,9 +3372,7 @@
               ]
             },
             "size": 512,
-            "sources": [
-              "pattern"
-            ],
+            "sources": ["pattern"],
             "type": "sha512",
             "violations": []
           }
@@ -5147,9 +4874,7 @@
           "description": "Deletes files in Windows system directories.",
           "occurrences": 1,
           "priority": 7,
-          "references": [
-            "1f9d6aee-2a8b-5eb2-909a-b01aee220621"
-          ],
+          "references": ["1f9d6aee-2a8b-5eb2-909a-b01aee220621"],
           "rule_id": "BH12237",
           "violations": 0
         },
@@ -5158,9 +4883,7 @@
           "description": "Writes to files in Windows system directories.",
           "occurrences": 1,
           "priority": 5,
-          "references": [
-            "1f9d6aee-2a8b-5eb2-909a-b01aee220621"
-          ],
+          "references": ["1f9d6aee-2a8b-5eb2-909a-b01aee220621"],
           "rule_id": "BH12820",
           "violations": 0
         },
@@ -5215,9 +4938,7 @@
           "description": "Tampers with system shutdown.",
           "occurrences": 1,
           "priority": 4,
-          "references": [
-            "1f9d6aee-2a8b-5eb2-909a-b01aee220621"
-          ],
+          "references": ["1f9d6aee-2a8b-5eb2-909a-b01aee220621"],
           "rule_id": "BH12744",
           "violations": 0
         },
@@ -6432,9 +6153,7 @@
           "description": "Contains URLs related to online mail providers.",
           "occurrences": 1,
           "priority": 2,
-          "references": [
-            "1f9d6aee-2a8b-5eb2-909a-b01aee220621"
-          ],
+          "references": ["1f9d6aee-2a8b-5eb2-909a-b01aee220621"],
           "rule_id": "BH16365",
           "violations": 0
         },
@@ -6443,9 +6162,7 @@
           "description": "Tampers with module search locations.",
           "occurrences": 1,
           "priority": 2,
-          "references": [
-            "1f9d6aee-2a8b-5eb2-909a-b01aee220621"
-          ],
+          "references": ["1f9d6aee-2a8b-5eb2-909a-b01aee220621"],
           "rule_id": "BH12678",
           "violations": 0
         },
@@ -7364,9 +7081,7 @@
           "description": "Contains lzma compressed PE file.",
           "occurrences": 1,
           "priority": 7,
-          "references": [
-            "1f9d6aee-2a8b-5eb2-909a-b01aee220621"
-          ],
+          "references": ["1f9d6aee-2a8b-5eb2-909a-b01aee220621"],
           "rule_id": "BH15323",
           "violations": 0
         },
@@ -7514,9 +7229,7 @@
           "description": "Reads from files in Windows system directories.",
           "occurrences": 1,
           "priority": 4,
-          "references": [
-            "1f9d6aee-2a8b-5eb2-909a-b01aee220621"
-          ],
+          "references": ["1f9d6aee-2a8b-5eb2-909a-b01aee220621"],
           "rule_id": "BH13336",
           "violations": 0
         },
@@ -8362,9 +8075,7 @@
           "description": "Requests permission required to shut down a system.",
           "occurrences": 1,
           "priority": 7,
-          "references": [
-            "1f9d6aee-2a8b-5eb2-909a-b01aee220621"
-          ],
+          "references": ["1f9d6aee-2a8b-5eb2-909a-b01aee220621"],
           "rule_id": "BH12523",
           "violations": 0
         },
@@ -8465,9 +8176,7 @@
           "description": "Reads paths to system directories on Windows.",
           "occurrences": 1,
           "priority": 4,
-          "references": [
-            "1f9d6aee-2a8b-5eb2-909a-b01aee220621"
-          ],
+          "references": ["1f9d6aee-2a8b-5eb2-909a-b01aee220621"],
           "rule_id": "BH13387",
           "violations": 0
         },
@@ -8568,9 +8277,7 @@
           "description": "Creates/opens files in Windows system directories.",
           "occurrences": 1,
           "priority": 4,
-          "references": [
-            "1f9d6aee-2a8b-5eb2-909a-b01aee220621"
-          ],
+          "references": ["1f9d6aee-2a8b-5eb2-909a-b01aee220621"],
           "rule_id": "BH13335",
           "violations": 0
         },
@@ -9594,9 +9301,7 @@
           "enabled": true,
           "priority": 1,
           "references": {
-            "component": [
-              "1f9d6aee-2a8b-5eb2-909a-b01aee220621"
-            ]
+            "component": ["1f9d6aee-2a8b-5eb2-909a-b01aee220621"]
           },
           "rule_id": "SQ14107",
           "severity": "high",
@@ -9960,313 +9665,121 @@
           "cvss": {
             "baseScore": "8.8",
             "metrics": [
-              [
-                "Attack Vector",
-                "Network"
-              ],
-              [
-                "Attack Complexity",
-                "Low"
-              ],
-              [
-                "Privileges Required",
-                "None"
-              ],
-              [
-                "User Interaction",
-                "Required"
-              ],
-              [
-                "Scope",
-                "Unchanged"
-              ],
-              [
-                "Confidentiality Impact",
-                "High"
-              ],
-              [
-                "Integrity Impact",
-                "High"
-              ],
-              [
-                "Availability Impact",
-                "High"
-              ]
+              ["Attack Vector", "Network"],
+              ["Attack Complexity", "Low"],
+              ["Privileges Required", "None"],
+              ["User Interaction", "Required"],
+              ["Scope", "Unchanged"],
+              ["Confidentiality Impact", "High"],
+              ["Integrity Impact", "High"],
+              ["Availability Impact", "High"]
             ],
             "version": 3
           },
-          "exploit": [
-            "EXISTS",
-            "FIXABLE"
-          ],
+          "exploit": ["EXISTS", "FIXABLE"],
           "name": "",
-          "sources": [
-            "NVD"
-          ],
-          "violations": [
-            "SQ31102",
-            "SQ31105"
-          ]
+          "sources": ["NVD"],
+          "violations": ["SQ31102", "SQ31105"]
         },
         "CVE-2016-9841": {
           "cvss": {
             "baseScore": "9.8",
             "metrics": [
-              [
-                "Attack Vector",
-                "Network"
-              ],
-              [
-                "Attack Complexity",
-                "Low"
-              ],
-              [
-                "Privileges Required",
-                "None"
-              ],
-              [
-                "User Interaction",
-                "None"
-              ],
-              [
-                "Scope",
-                "Unchanged"
-              ],
-              [
-                "Confidentiality Impact",
-                "High"
-              ],
-              [
-                "Integrity Impact",
-                "High"
-              ],
-              [
-                "Availability Impact",
-                "High"
-              ]
+              ["Attack Vector", "Network"],
+              ["Attack Complexity", "Low"],
+              ["Privileges Required", "None"],
+              ["User Interaction", "None"],
+              ["Scope", "Unchanged"],
+              ["Confidentiality Impact", "High"],
+              ["Integrity Impact", "High"],
+              ["Availability Impact", "High"]
             ],
             "version": 3
           },
-          "exploit": [
-            "EXISTS",
-            "FIXABLE"
-          ],
+          "exploit": ["EXISTS", "FIXABLE"],
           "name": "",
-          "sources": [
-            "NVD"
-          ],
-          "violations": [
-            "SQ31102",
-            "SQ31104"
-          ]
+          "sources": ["NVD"],
+          "violations": ["SQ31102", "SQ31104"]
         },
         "CVE-2016-9842": {
           "cvss": {
             "baseScore": "8.8",
             "metrics": [
-              [
-                "Attack Vector",
-                "Network"
-              ],
-              [
-                "Attack Complexity",
-                "Low"
-              ],
-              [
-                "Privileges Required",
-                "None"
-              ],
-              [
-                "User Interaction",
-                "Required"
-              ],
-              [
-                "Scope",
-                "Unchanged"
-              ],
-              [
-                "Confidentiality Impact",
-                "High"
-              ],
-              [
-                "Integrity Impact",
-                "High"
-              ],
-              [
-                "Availability Impact",
-                "High"
-              ]
+              ["Attack Vector", "Network"],
+              ["Attack Complexity", "Low"],
+              ["Privileges Required", "None"],
+              ["User Interaction", "Required"],
+              ["Scope", "Unchanged"],
+              ["Confidentiality Impact", "High"],
+              ["Integrity Impact", "High"],
+              ["Availability Impact", "High"]
             ],
             "version": 3
           },
-          "exploit": [
-            "EXISTS",
-            "FIXABLE"
-          ],
+          "exploit": ["EXISTS", "FIXABLE"],
           "name": "",
-          "sources": [
-            "NVD"
-          ],
-          "violations": [
-            "SQ31102",
-            "SQ31105"
-          ]
+          "sources": ["NVD"],
+          "violations": ["SQ31102", "SQ31105"]
         },
         "CVE-2016-9843": {
           "cvss": {
             "baseScore": "9.8",
             "metrics": [
-              [
-                "Attack Vector",
-                "Network"
-              ],
-              [
-                "Attack Complexity",
-                "Low"
-              ],
-              [
-                "Privileges Required",
-                "None"
-              ],
-              [
-                "User Interaction",
-                "None"
-              ],
-              [
-                "Scope",
-                "Unchanged"
-              ],
-              [
-                "Confidentiality Impact",
-                "High"
-              ],
-              [
-                "Integrity Impact",
-                "High"
-              ],
-              [
-                "Availability Impact",
-                "High"
-              ]
+              ["Attack Vector", "Network"],
+              ["Attack Complexity", "Low"],
+              ["Privileges Required", "None"],
+              ["User Interaction", "None"],
+              ["Scope", "Unchanged"],
+              ["Confidentiality Impact", "High"],
+              ["Integrity Impact", "High"],
+              ["Availability Impact", "High"]
             ],
             "version": 3
           },
-          "exploit": [
-            "EXISTS",
-            "FIXABLE"
-          ],
+          "exploit": ["EXISTS", "FIXABLE"],
           "name": "",
-          "sources": [
-            "NVD"
-          ],
-          "violations": [
-            "SQ31102",
-            "SQ31104"
-          ]
+          "sources": ["NVD"],
+          "violations": ["SQ31102", "SQ31104"]
         },
         "CVE-2018-25032": {
           "cvss": {
             "baseScore": "7.5",
             "metrics": [
-              [
-                "Attack Vector",
-                "Network"
-              ],
-              [
-                "Attack Complexity",
-                "Low"
-              ],
-              [
-                "Privileges Required",
-                "None"
-              ],
-              [
-                "User Interaction",
-                "None"
-              ],
-              [
-                "Scope",
-                "Unchanged"
-              ],
-              [
-                "Confidentiality Impact",
-                "None"
-              ],
-              [
-                "Integrity Impact",
-                "None"
-              ],
-              [
-                "Availability Impact",
-                "High"
-              ]
+              ["Attack Vector", "Network"],
+              ["Attack Complexity", "Low"],
+              ["Privileges Required", "None"],
+              ["User Interaction", "None"],
+              ["Scope", "Unchanged"],
+              ["Confidentiality Impact", "None"],
+              ["Integrity Impact", "None"],
+              ["Availability Impact", "High"]
             ],
             "version": 3
           },
-          "exploit": [
-            "EXISTS",
-            "FIXABLE"
-          ],
+          "exploit": ["EXISTS", "FIXABLE"],
           "name": "",
-          "sources": [
-            "NVD"
-          ],
-          "violations": [
-            "SQ31102",
-            "SQ31105"
-          ]
+          "sources": ["NVD"],
+          "violations": ["SQ31102", "SQ31105"]
         },
         "CVE-2022-37434": {
           "cvss": {
             "baseScore": "9.8",
             "metrics": [
-              [
-                "Attack Vector",
-                "Network"
-              ],
-              [
-                "Attack Complexity",
-                "Low"
-              ],
-              [
-                "Privileges Required",
-                "None"
-              ],
-              [
-                "User Interaction",
-                "None"
-              ],
-              [
-                "Scope",
-                "Unchanged"
-              ],
-              [
-                "Confidentiality Impact",
-                "High"
-              ],
-              [
-                "Integrity Impact",
-                "High"
-              ],
-              [
-                "Availability Impact",
-                "High"
-              ]
+              ["Attack Vector", "Network"],
+              ["Attack Complexity", "Low"],
+              ["Privileges Required", "None"],
+              ["User Interaction", "None"],
+              ["Scope", "Unchanged"],
+              ["Confidentiality Impact", "High"],
+              ["Integrity Impact", "High"],
+              ["Availability Impact", "High"]
             ],
             "version": 3
           },
-          "exploit": [
-            "EXISTS",
-            "FIXABLE"
-          ],
+          "exploit": ["EXISTS", "FIXABLE"],
           "name": "",
-          "sources": [
-            "NVD"
-          ],
-          "violations": [
-            "SQ31102",
-            "SQ31104"
-          ]
+          "sources": ["NVD"],
+          "violations": ["SQ31102", "SQ31104"]
         }
       }
     }
