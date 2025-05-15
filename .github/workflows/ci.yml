@@ -49,11 +49,10 @@ jobs:
         id: checkout
         uses: actions/checkout@v4
 
-      - name: show data files
-        id: show1
+      - name: show input
+        id: show_input
         run: |
-          ls -l .
-          ls -l ./data/
+          ls -l ./data/FD13-FullUSB.zip-report.rl.json
 
       - name: Test Local Action
         id: test-action
@@ -62,7 +61,7 @@ jobs:
           rl_json_path: './data/FD13-FullUSB.zip-report.rl.json'
           md_report_path: './report-rl-json.md'
 
-      - name: show data files
-        id: show2
+      - name: show output
+        id: show_output
         run: |
-          ls -l .
+          ls -l ./report-rl-json.md
