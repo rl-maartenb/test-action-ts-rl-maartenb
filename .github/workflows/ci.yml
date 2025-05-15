@@ -50,7 +50,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: show data files
-        id: show
+        id: show1
         run: |
           ls -l .
           ls -l ./data/
@@ -63,6 +63,6 @@ jobs:
           md_report_path: './report-rl-json.md'
 
       - name: show data files
-        id: show
+        id: show2
         run: |
           ls -l .

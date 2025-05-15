@@ -6,6 +6,8 @@ prettier:
 
 lint:
 	npx eslint .
+	npm run format:check
+	npm run lint
 
 bundle:
 	npm run bundle
