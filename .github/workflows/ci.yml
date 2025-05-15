@@ -60,3 +60,9 @@ jobs:
         uses: ./
         with:
           rl_json_path: './data/FD13-FullUSB.zip-report.rl.json'
+          md_report_path: './report-rl-json.md'
+
+      - name: show data files
+        id: show
+        run: |
+          ls -l .

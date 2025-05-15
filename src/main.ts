@@ -1,6 +1,6 @@
 import * as core from '@actions/core'
-import * as fs from 'fs'
-
+// import * as fs from 'fs'
+import * as fs from 'node:fs'
 //import { RlJsonReportProcessor } from './rlJsonReportProcessor'
 // Debug logs are only output if the `ACTIONS_STEP_DEBUG` secret is true
 
@@ -64,6 +64,23 @@ export class RlJsonReportProcessor {
     this.violations = this.jpath2dict(this.metadata, 'violations')
     this.components = this.jpath2dict(this.metadata, 'components')
     this.vulnerabilities = this.jpath2dict(this.metadata, 'vulnerabilities')
+  }
+
+  async write(filename: string) {
+    let filehandle
+
+    try {
+      const filehandle = fs.openSync(filename, 'w')
+      for (const line of this.out) {
+        fs.writeSync(filehandle, line + '\n')
+      }
+    } catch (error) {
+      console.error('write failed with error: ' + error)
+    } finally {
+      if (filehandle) {
+        fs.closeSync(filehandle)
+      }
+    }
   }
 
   jpath2string(data: ODictByString, path_str: string): string {
@@ -426,10 +443,12 @@ export class RlJsonReportProcessor {
 export async function run(): Promise<void> {
   try {
     const rl_json_file = core.getInput('rl_json_path')
-    core.debug(`${rl_json_file}`)
+    const md_report_path = core.getInput('md_report_path')
+    core.debug(`input: ${rl_json_file}, output: ${md_report_path}`)
+
     const rjrp = new RlJsonReportProcessor(rl_json_file)
     rjrp.simplifyRlJson()
-    rjrp.output() // prints to console.log()
+    await rjrp.write(md_report_path)
   } catch (error) {
     // Fail the workflow run if an error occurs
     if (error instanceof Error) {

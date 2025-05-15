@@ -12,6 +12,9 @@ inputs:
   rl_json_path:
     description: The path to the report.rl.json file.
     required: true
+  md_report_path:
+    description: The path to the markdown file (will be overwritten if exists).
+    required: true
 
 runs:
   using: node20

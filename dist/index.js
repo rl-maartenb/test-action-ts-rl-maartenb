@@ -1,7 +1,6 @@
 import require$$0 from 'os';
 import require$$0$1 from 'crypto';
-import * as require$$1 from 'fs';
-import require$$1__default from 'fs';
+import require$$1 from 'fs';
 import require$$1$5 from 'path';
 import require$$2 from 'http';
 import require$$3 from 'https';
@@ -28,6 +27,7 @@ import require$$6 from 'string_decoder';
 import require$$0$9 from 'diagnostics_channel';
 import require$$2$2 from 'child_process';
 import require$$6$1 from 'timers';
+import * as fs from 'node:fs';
 
 var commonjsGlobal = typeof globalThis !== 'undefined' ? globalThis : typeof window !== 'undefined' ? window : typeof global !== 'undefined' ? global : typeof self !== 'undefined' ? self : {};
 
@@ -223,7 +223,7 @@ function requireFileCommand () {
 	// We use any as a valid input type
 	/* eslint-disable @typescript-eslint/no-explicit-any */
 	const crypto = __importStar(require$$0$1);
-	const fs = __importStar(require$$1__default);
+	const fs = __importStar(require$$1);
 	const os = __importStar(require$$0);
 	const utils_1 = requireUtils$1();
 	function issueFileCommand(command, message) {
@@ -25201,7 +25201,7 @@ function requireSummary () {
 		Object.defineProperty(exports, "__esModule", { value: true });
 		exports.summary = exports.markdownSummary = exports.SUMMARY_DOCS_URL = exports.SUMMARY_ENV_VAR = void 0;
 		const os_1 = require$$0;
-		const fs_1 = require$$1__default;
+		const fs_1 = require$$1;
 		const { access, appendFile, writeFile } = fs_1.promises;
 		exports.SUMMARY_ENV_VAR = 'GITHUB_STEP_SUMMARY';
 		exports.SUMMARY_DOCS_URL = 'https://docs.github.com/actions/using-workflows/workflow-commands-for-github-actions#adding-a-job-summary';
@@ -25593,7 +25593,7 @@ function requireIoUtil () {
 		var _a;
 		Object.defineProperty(exports, "__esModule", { value: true });
 		exports.getCmdPath = exports.tryGetExecutablePath = exports.isRooted = exports.isDirectory = exports.exists = exports.READONLY = exports.UV_FS_O_EXLOCK = exports.IS_WINDOWS = exports.unlink = exports.symlink = exports.stat = exports.rmdir = exports.rm = exports.rename = exports.readlink = exports.readdir = exports.open = exports.mkdir = exports.lstat = exports.copyFile = exports.chmod = void 0;
-		const fs = __importStar(require$$1__default);
+		const fs = __importStar(require$$1);
 		const path = __importStar(require$$1$5);
 		_a = fs.promises
 		// export const {open} = 'fs'
@@ -27285,7 +27285,7 @@ class RlJsonReportProcessor {
         this.out = [];
         this.debug = debug;
         this.filename = filename;
-        this.data = JSON.parse(require$$1.readFileSync(this.filename, 'utf-8'));
+        this.data = JSON.parse(fs.readFileSync(this.filename, 'utf-8'));
         this.name = this.jpath2string(this.data, 'report.info.file.name') || '<no name>';
         this.purl = this.jpath2string(this.data, 'report.info.file.identity.purl') || '<no purl>';
         console.log(`# filePath: ${this.filename} purl: ${this.purl}`);
@@ -27295,6 +27295,19 @@ class RlJsonReportProcessor {
         this.violations = this.jpath2dict(this.metadata, 'violations');
         this.components = this.jpath2dict(this.metadata, 'components');
         this.vulnerabilities = this.jpath2dict(this.metadata, 'vulnerabilities');
+    }
+    async write(filename) {
+        try {
+            const filehandle = fs.openSync(filename, 'w');
+            for (const line of this.out) {
+                fs.writeSync(filehandle, line + '\n');
+            }
+        }
+        catch (error) {
+            console.error('write failed with error: ' + error);
+        }
+        finally {
+        }
     }
     jpath2string(data, path_str) {
         const path_list = path_str.split('.');
@@ -27596,10 +27609,11 @@ class RlJsonReportProcessor {
 async function run() {
     try {
         const rl_json_file = coreExports.getInput('rl_json_path');
-        coreExports.debug(`${rl_json_file}`);
+        const md_report_path = coreExports.getInput('md_report_path');
+        coreExports.debug(`input: ${rl_json_file}, output: ${md_report_path}`);
         const rjrp = new RlJsonReportProcessor(rl_json_file);
         rjrp.simplifyRlJson();
-        rjrp.output(); // prints to console.log()
+        await rjrp.write(md_report_path);
     }
     catch (error) {
         // Fail the workflow run if an error occurs
